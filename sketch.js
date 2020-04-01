@@ -62,7 +62,7 @@ function draw() {
       noStroke();
       textSize(windowWidth / 10);
       text(date[r], windowWidth / 2, windowHeight / 4);
-      text(id[r], windowWidth / 2, windowHeight / 4*3);
+      text("confirmed: " + id[r], windowWidth / 2, windowHeight / 4*3);
     }
   }
 
