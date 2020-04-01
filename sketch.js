@@ -1,6 +1,6 @@
 let table;
 let rowCount;
-let display = 10;
+let display = 1;
 let mindist = 75;
 
 let n = [];
