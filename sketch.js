@@ -12,7 +12,7 @@ let classification = [];
 let connected = [];
 
 function setup() {
-  table = loadTable('assets/data.csv', 'csv', 'header');
+  table = loadTable('data.csv', 'csv', 'header');
   createCanvas(windowWidth, windowHeight);
   rowCount = table.getRowCount();
   console.log(rowCount);
