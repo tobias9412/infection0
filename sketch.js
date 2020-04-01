@@ -15,8 +15,11 @@ function preload() {
   table = loadTable('https://raw.githubusercontent.com/tobias9412/infection0/master/data.csv',  'csv', 'header');
 }
 
+var screenW, screenH;
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  screenW = windowWidth;
+  screenH = windowHeight;
+  createCanvas(screenW, screenH);
   rowCount = table.getRowCount();
 
   for (let r = 0; r < rowCount; r++) {
@@ -54,15 +57,18 @@ function setup() {
 }
 
 function draw() {
+  background(200);
   for (let r = 0; r < rowCount; r++) {
     if (n[r].journal == display) {
       fill(200);
-     rect(0, 0,  windowWidth, windowHeight);
-     fill(150);
+     rect(0, screenH-50,  windowWidth, 50);
+     fill(100);
       noStroke();
-      textSize(windowWidth / 10);
-      text(date[r], windowWidth / 2, windowHeight / 4);
-      text("confirmed: " + id[r], windowWidth / 2, windowHeight / 4*3);
+      textSize(20);
+      textAlign(LEFT, TOP);
+      text("date:"+date[r], 20, screenH-50);
+       textAlign(RIGHT, TOP);
+     text("confirmed:" + id[r], screenW-20, screenH-50);
     }
   }
 
@@ -117,10 +123,6 @@ function mouseClicked() {
 function touchEnded() {
   if (display < n[rowCount-1].journal)
     display++;
-}
-
-function windowResized() {
-  resizeCanvas(windowWidth, windowHeight);
 }
 
 class Node {
