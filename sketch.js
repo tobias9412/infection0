@@ -115,6 +115,11 @@ function mouseClicked() {
     display++;
 }
 
+function touchEnded() {
+  if (display < n[rowCount-1].journal)
+    display++;
+}
+
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
 }
