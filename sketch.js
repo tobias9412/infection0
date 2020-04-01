@@ -11,11 +11,13 @@ let connection = [];
 let classification = [];
 let connected = [];
 
+function preload() {
+  table = loadTable('https://raw.githubusercontent.com/tobias9412/infection0/master/data.csv',  'csv', 'header');
+}
+
 function setup() {
-  table = loadTable('https://raw.githubusercontent.com/tobias9412/infection0/master/data.csv', 'csv', 'header');
   createCanvas(windowWidth, windowHeight);
   rowCount = table.getRowCount();
-  console.log(rowCount);
 
   for (let r = 0; r < rowCount; r++) {
     id[r] = r + 1;
@@ -106,6 +108,15 @@ function draw() {
       text(n[r].id, n[r].pos.x, n[r].pos.y);
     }
   }
+}
+
+function mouseClicked() {
+  if (display < n[rowCount-1].journal)
+    display++;
+}
+
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
 }
 
 class Node {
