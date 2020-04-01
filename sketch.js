@@ -12,7 +12,7 @@ let classification = [];
 let connected = [];
 
 function setup() {
-  table = loadTable('https://github.com/tobias9412/infection0/blob/master/data.csv', 'csv', 'header');
+  table = loadTable('https://raw.githubusercontent.com/tobias9412/infection0/master/data.csv', 'csv', 'header');
   createCanvas(windowWidth, windowHeight);
   rowCount = table.getRowCount();
   console.log(rowCount);
