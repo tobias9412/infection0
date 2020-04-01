@@ -54,16 +54,15 @@ function setup() {
 }
 
 function draw() {
-  background(200);
-
   for (let r = 0; r < rowCount; r++) {
     if (n[r].journal == display) {
       fill(200);
-       rect(0, 0,  windowWidth, windowHeight/2);
+     rect(0, 0,  windowWidth, windowHeight);
      fill(150);
       noStroke();
       textSize(windowWidth / 10);
       text(date[r], windowWidth / 2, windowHeight / 4);
+      text(id[r], windowWidth / 2, windowHeight / 4*3);
     }
   }
 
