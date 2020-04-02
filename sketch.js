@@ -104,14 +104,14 @@ function draw() {
     for (let r = 0; r < rowCount; r++) {
     if (n[r].journal == display) {
       fill(200);
-     rect(0, screenH-50,  windowWidth, 50);
+     rect(0, screenH-30,  windowWidth, 50);
      fill(100);
       noStroke();
       textSize(20);
       textAlign(LEFT, TOP);
-      text("date:"+date[r], 20, screenH-50);
+      text("date:"+date[r], 20, screenH-30);
        textAlign(RIGHT, TOP);
-     text("confirmed:" + id[r], screenW-20, screenH-50);
+     text("confirmed:" + id[r], screenW-20, screenH-30);
     }
   }
 }
