@@ -58,20 +58,7 @@ function setup() {
 
 function draw() {
   background(200);
-  for (let r = 0; r < rowCount; r++) {
-    if (n[r].journal == display) {
-      fill(200);
-     rect(0, screenH-50,  windowWidth, 50);
-     fill(100);
-      noStroke();
-      textSize(20);
-      textAlign(LEFT, TOP);
-      text("date:"+date[r], 20, screenH-50);
-       textAlign(RIGHT, TOP);
-     text("confirmed:" + id[r], screenW-20, screenH-50);
-    }
-  }
-
+  
   for (let r = 0; r < rowCount; r++) {
     for (let s = 0; s < rowCount; s++) {
       if (n[r].journal <= display && n[s].journal <= display && s != r) {
@@ -111,6 +98,20 @@ function draw() {
       textSize(15);
       textAlign(CENTER, CENTER);
       text(n[r].id, n[r].pos.x, n[r].pos.y);
+    }
+  }
+  
+    for (let r = 0; r < rowCount; r++) {
+    if (n[r].journal == display) {
+      fill(200);
+     rect(0, screenH-50,  windowWidth, 50);
+     fill(100);
+      noStroke();
+      textSize(20);
+      textAlign(LEFT, TOP);
+      text("date:"+date[r], 20, screenH-50);
+       textAlign(RIGHT, TOP);
+     text("confirmed:" + id[r], screenW-20, screenH-50);
     }
   }
 }
