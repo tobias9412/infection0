@@ -95,7 +95,7 @@ function draw() {
   for (let r = 0; r < rowCount; r++) {
     //node display
     if (n[r].journal <= display) {(HSB, 255);
-      fill(127+n[r].intensity*15, 149, 0);
+      fill(127+n[r].intensity*30, 149, 0);
       noStroke();
       ellipse(n[r].pos.x, n[r].pos.y, 10+n[r].intensity/2, 10+n[r].intensity/2);
       fill(255);
