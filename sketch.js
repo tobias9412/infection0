@@ -107,7 +107,7 @@ function draw() {
               n[r].pos.sub(n[r].speed.mult(dist(n[r].pos.x, n[r].pos.y, n[s].pos.x, n[s].pos.y) / mindist * random(1)));
               n[s].pos.sub(n[r].speed.mult(dist(n[r].pos.x, n[r].pos.y, n[s].pos.x, n[s].pos.y) / mindist * random(-1)));
             }
-            if (n[n[s].id].journal <= display){
+            if (n[n[s].id-1].journal <= display){
               n[r].intensity++;
             }
           }
@@ -146,8 +146,10 @@ function draw() {
     text("直至2020年1月" + (display+22) + "日" , 20, screenH-88);
   if (display >= 10 && display < 39)
     text("直至2020年2月" + (display-9) + "日" , 20, screenH-88);
-  if (display >= 39)
+  if (display >= 39 && display < 70)
     text("直至2020年3月" + (display-38) + "日" , 20, screenH-88);
+  if (display >= 70)
+    text("直至2020年4月" + (display-69) + "日" , 20, screenH-88);
 
   textAlign(LEFT, BOTTOM);
   text("已出院個案：　　 " + strDischarged + "宗\n死亡個案：　　　 " + strDeceased + "宗\n確診或疑似個案： " + strConfirmed　+ "宗", 20, screenH-10);
@@ -167,9 +169,10 @@ function draw() {
 function touchEnded() {
   strDischarged = 0;
   strDeceased = 0;
+  console.log (n[rowCount-1].journal, display);
 
   if (display < n[rowCount-1].journal)
-    display ++;
+    display += 1;
 
   for (let r = 0; r < rowCount; r++) {
 
