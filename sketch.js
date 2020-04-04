@@ -13,7 +13,7 @@ let connected      = [];
 let endJournal     = [];
 let endStatus      = [];
 
-let strConfirmed  = 0;
+let strConfirmed  = 2;
 let strDischarged = 0;
 let strDeceased   = 0;
 
@@ -143,14 +143,14 @@ function draw() {
   textSize(20);
   textAlign(LEFT, BOTTOM);
   if (display < 10)
-    text("Date: " + (display+22) + "/1/2020" , 20, screenH-85);
+    text("直至2020年1月" + (display+22) + "日" , 20, screenH-88);
   if (display >= 10 && display < 39)
-    text("Date: " + (display-9) + "/2/2020" , 20, screenH-85);
+    text("直至2020年2月" + (display-9) + "日" , 20, screenH-88);
   if (display >= 39)
-    text("Date: " + (display-38) + "/3/2020" , 20, screenH-85);
+    text("直至2020年3月" + (display-38) + "日" , 20, screenH-88);
 
   textAlign(LEFT, BOTTOM);
-  text("Discharged Cases: " + strDischarged + "\nDeceased Cases: " + strDeceased + "\nConfirmed / Probable Cases: " + strConfirmed, 20, screenH-10);
+  text("已出院個案：　　 " + strDischarged + "宗\n死亡個案：　　　 " + strDeceased + "宗\n確診或疑似個案： " + strConfirmed　+ "宗", 20, screenH-10);
 
 
    for (let r = 0; r < rowCount; r++) 
