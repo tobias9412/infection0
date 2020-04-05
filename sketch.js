@@ -193,7 +193,7 @@ function draw() {
     rect(windowWidth/2, windowHeight/2+firstPopUpY, 360, 600, 15);
     fill(50);
     textAlign(CENTER, CENTER);
-    text("拖放或滑動以瀏覽畫面\n\n\n圖例\n\n\n\n\n\n\n\n\n關連的個案會為以聚集一起顯示，\n個案傳染影響越大，\n顏色越偏橙色，形狀越大。\n\n\n", windowWidth/2, windowHeight/2+firstPopUpY);
+    text("拖放或滑動以瀏覽畫面\n\n\n圖例\n\n\n\n\n\n\n\n\n關連的個案會以聚集圓點顯示，\n個案傳染影響越大，\n顏色越偏橙色，圓點越大。\n\n\n", windowWidth/2, windowHeight/2+firstPopUpY);
     textAlign(LEFT, CENTER);
     text("已出院個案\n\n死亡個案\n\n確診或疑似個案\n\n\n", windowWidth/2, windowHeight/2+firstPopUpY);
     fill(0, 0);
