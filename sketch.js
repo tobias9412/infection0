@@ -1,7 +1,12 @@
 let table;
 let rowCount;
 let display = 0;
-let mindist = 50;
+let mindist = 75;
+
+let firstPopUpY = 100;
+let mobile, statusBarHeight;
+
+let moveStart, moveEnd, translatePos;
 
 let n              = [];
 let id             = [];
@@ -22,11 +27,17 @@ function preload() {
   table = loadTable('https://raw.githubusercontent.com/tobias9412/infection0/master/data.csv',  'csv', 'header');
 }
 
-var screenW, screenH;
 function setup() {
-  screenW = windowWidth;
-  screenH = windowHeight;
-  createCanvas(screenW, screenH);
+  translatePos = createVector(0,0);
+  moveDelta = createVector(0,0);
+
+  if (windowWidth < 768) mobile = true;
+  else mobile = false;
+
+  if (mobile) statusBarHeight = 170;
+  else statusBarHeight = 110;
+
+  createCanvas(windowWidth, windowHeight);
   rowCount = table.getRowCount();
 
   for (let r = 0; r < rowCount; r++) {
@@ -84,131 +95,191 @@ n[r] = new Node(id[r], journal[r], connected[r], classification[r], endJournal[r
 function draw() {
   background(200);
 
-  if (display == 0) {
-    fill(180);
-    rect(0, 0, windowWidth, windowHeight);
-    fill(50);
-    textAlign(CENTER, CENTER);
-    text("按滑鼠左鍵或碰觸螢幕前進下一日\n\n\n圖例\n\n\n\n\n\n\n\n\n\n關連的個案會為以聚集一起顯示，\n個案傳染影響越大，\n顏色越偏橙色，形狀越大。", windowWidth/2, windowHeight/2);
-    textAlign(LEFT, CENTER);
-    text("已出院個案\n\n死亡個案\n\n確診或疑似個案", windowWidth/2, windowHeight/2);
-    fill(0, 0);
-    stroke(230);
-    ellipse(windowWidth*0.45, windowHeight/2-50, 15, 15);
-    fill(0);
-    noStroke();
-    ellipse(windowWidth*0.45, windowHeight/2, 15, 15);
-    fill(230);
-    noStroke();
-    ellipse(windowWidth*0.45, windowHeight/2+50, 15, 15);
-  } else {
+  push();
+  translate(p5.Vector.add(translatePos, moveDelta));
 
-
+  if (display > 0) {
     for (let r = 0; r < rowCount; r++) {
       for (let s = 0; s < rowCount; s++) {
         if (n[r].journal <= display && n[s].journal <= display && s > r) {
 
-          // seperating
-          if (p5.Vector.dist(n[r].pos, n[s].pos) < mindist) {
-            n[r].speed = p5.Vector.sub(n[r].pos, n[s].pos).normalize();
-            n[r].pos.add(n[r].speed.mult(mindist / dist(n[r].pos.x, n[r].pos.y, n[s].pos.x, n[s].pos.y) / 10));
-          }
-
-
           for (let c = 0; c < n[r].connected.length; c++) {
             // when connected
             if (n[r].connected[c] == n[s].id) {
-              strokeWeight(2);
-              stroke(50);
+              //strokeWeight(2);
+              //stroke(50);
               //line(n[r].pos.x, n[r].pos.y, n[s].pos.x, n[s].pos.y);
 
               // cluster when connected
-              if (p5.Vector.dist(n[r].pos, n[s].pos) > mindist*0.5) {
-                n[r].speed = p5.Vector.sub(n[r].pos, n[s].pos).normalize(); 
-                n[r].pos.sub(n[r].speed.mult(dist(n[r].pos.x, n[r].pos.y, n[s].pos.x, n[s].pos.y) / mindist * random(1.5)));
-                n[s].pos.sub(n[r].speed.mult(dist(n[r].pos.x, n[r].pos.y, n[s].pos.x, n[s].pos.y) / mindist * random(-1.5)));
-              }
+              //if (p5.Vector.dist(n[r].pos, n[s].pos) > mindist) {
+                n[r].pos.lerp(n[s].pos, 0.01);
+                n[s].pos.lerp(n[r].pos, 0.01);
+              //}    
+
+              //n[r].speed = p5.Vector.sub(n[r].pos, n[s].pos).normalize(); 
+              //n[r].pos.sub(n[r].speed.mult(dist(n[r].pos.x, n[r].pos.y, n[s].pos.x, n[s].pos.y) / mindist * random(1.5)));
+              //n[s].pos.sub(n[r].speed.mult(dist(n[r].pos.x, n[r].pos.y, n[s].pos.x, n[s].pos.y) / mindist * random(-1.5)));
+              //}
+
               if (n[n[s].id-1].journal <= display){
                 n[r].intensity++;
               }
-            }
+            } 
           }
+
+          // seperating
+          if (p5.Vector.dist(n[r].pos, n[s].pos) < mindist) {
+            n[r].speed = p5.Vector.sub(n[r].pos, n[s].pos).normalize();
+            n[r].pos.add(n[r].speed.mult(mindist / dist(n[r].pos.x, n[r].pos.y, n[s].pos.x, n[s].pos.y)/10));
+            n[s].pos.add(n[r].speed.mult(mindist / dist(n[r].pos.x, n[r].pos.y, n[s].pos.x, n[s].pos.y)/-10));
+         }
         }
       }
     }
 
+    //node display // hospitalised
     for (let r = 0; r < rowCount; r++) {
-      //node display
       if (n[r].journal <= display) {
-        // hospitalised
-        if (n[r].endJournal > display || n[r].endStatus == 0) {
-        fill(127+n[r].intensity*30, 149, 0);
-        noStroke();
-        ellipse(n[r].pos.x, n[r].pos.y, 10+n[r].intensity*log(5), 10+n[r].intensity*log(5));
-      } else { 
-      if (n[r].endJournal <= display && n[r].endStatus == 1) {
-        stroke(127+n[r].intensity*30, 149, 0);
-        fill(200);
-        ellipse(n[r].pos.x, n[r].pos.y, 10+n[r].intensity*log(5), 10+n[r].intensity*log(5));
+        if (n[r].endJournal > display) {
+          fill(127+n[r].intensity*30, 149, 0);
+          noStroke();
+          ellipse(n[r].pos.x, n[r].pos.y, 10+n[r].intensity*log(5), 10+n[r].intensity*log(5));
+        }
       }
-        if (n[r].endJournal <= display && n[r].endStatus == 2) {
-        noStroke();
-        fill(20);
-        ellipse(n[r].pos.x, n[r].pos.y, 10+n[r].intensity*log(5), 10+n[r].intensity*log(5));
-       }
-      }
+    } 
 
+    for (let r = 0; r < rowCount; r++) { 
+      if (n[r].journal <= display && n[r].endJournal <= display) {
+        if(n[r].endStatus == 0) {
+          fill(127+n[r].intensity*30, 149, 0);
+          noStroke();
+          ellipse(n[r].pos.x, n[r].pos.y, 10+n[r].intensity*log(5), 10+n[r].intensity*log(5));
+        }
+        else if (n[r].endStatus == 1) {
+          stroke(127+n[r].intensity*30, 149, 0);
+          fill(200);
+          ellipse(n[r].pos.x, n[r].pos.y, 10+n[r].intensity*log(5), 10+n[r].intensity*log(5));
+        } 
+        else if (n[r].endStatus == 2) {
+          noStroke();
+          fill(20);
+          ellipse(n[r].pos.x, n[r].pos.y, 10+n[r].intensity*log(5), 10+n[r].intensity*log(5));
+        } 
+      }       
     }
   }
-    //info display
 
+  pop();
+  if (mobile) { 
+    rectMode(CORNER);
+    fill (130);
+    rect(10, windowHeight-60, windowWidth-20, 50, 10);
+    fill(230);
+    textAlign(CENTER, CENTER);
+    text("下一日", windowWidth/2, windowHeight-35);
+  }
+  else {
+    rectMode(CORNER);
+    fill (130);
+    rect(300, windowHeight-statusBarHeight+20, windowWidth-320, statusBarHeight-30, 10);
+    fill(230);
+    textAlign(CENTER, CENTER);
+    text("下一日", 300+(windowWidth-320)/2, windowHeight-45);
+}
+  if (display == 0) {
+    firstPopUpY = lerp(firstPopUpY, 0, 0.3);
+
+    // welcomePopUp
+    rectMode(CENTER)
+    fill(230);
+    rect(windowWidth/2, windowHeight/2+firstPopUpY, 360, 600, 15);
+    fill(50);
+    textAlign(CENTER, CENTER);
+    text("\n\n\n\n圖例\n\n\n\n\n\n\n\n\n關連的個案會為以聚集一起顯示，\n個案傳染影響越大，\n顏色越偏橙色，形狀越大。\n\n\n", windowWidth/2, windowHeight/2+firstPopUpY);
+    textAlign(LEFT, CENTER);
+    text("已出院個案\n\n死亡個案\n\n確診或疑似個案\n\n\n", windowWidth/2, windowHeight/2+firstPopUpY);
+    fill(0, 0);
+    stroke(150);
+    ellipse(windowWidth*0.45, windowHeight/2-90+firstPopUpY, 15, 15);
+    fill(0);
+    noStroke();
+    ellipse(windowWidth*0.45, windowHeight/2-40+firstPopUpY, 15, 15);
+    fill(150);
+    noStroke();
+    ellipse(windowWidth*0.45, windowHeight/2+10+firstPopUpY, 15, 15);
+
+    fill(100);
+    rect(windowWidth/2, windowHeight/2+240+firstPopUpY, 300, 60, 10);
+    fill(230);
+    textAlign(CENTER, CENTER);
+    text("繼續", windowWidth/2, windowHeight/2+240+firstPopUpY);
+  }
+
+  else {
+    firstPopUpY = lerp(firstPopUpY, windowHeight/2+300, 0.3);
+  
+    //info display
     fill(50);
     noStroke();
     textSize(20);
-    textAlign(LEFT, BOTTOM);
+    textAlign(LEFT, TOP);
     if (display < 10)
-      text("截至2020年1月" + (display+22) + "日" , 10, screenH-88);
+      text("截至2020年1月" + (display+22) + "日" , 10, windowHeight-statusBarHeight+10);
     if (display >= 10 && display < 39)
-      text("截至2020年2月" + (display-9) + "日" , 10, screenH-88);
+      text("截至2020年2月" + (display-9) + "日"  , 10, windowHeight-statusBarHeight+10);
     if (display >= 39 && display < 70)
-      text("截至2020年3月" + (display-38) + "日" , 10, screenH-88);
+      text("截至2020年3月" + (display-38) + "日" , 10, windowHeight-statusBarHeight+10);
     if (display >= 70)
-      text("截至2020年4月" + (display-69) + "日" , 10, screenH-88);
+      text("截至2020年4月" + (display-69) + "日" , 10, windowHeight-statusBarHeight+10);
 
-    textAlign(LEFT, BOTTOM);
-    text("已出院個案：　　 " + strDischarged + "宗\n死亡個案：　　　 " + strDeceased + "宗\n確診或疑似個案： " + strConfirmed　+ "宗", 10, screenH-10);
-
-
-     for (let r = 0; r < rowCount; r++) 
-         n[r].intensity = 0;
-    
+    textAlign(LEFT, TOP);
+    text("已出院個案：　　 " + strDischarged + "宗\n死亡個案：　　　 " + strDeceased + "宗\n確診或疑似個案： " + strConfirmed　+ "宗", 10, windowHeight-statusBarHeight+35);
   }
+  for (let r = 0; r < rowCount; r++) 
+    n[r].intensity = 0;
 }
 
+function touchStarted() {
+  moveStart = createVector(mouseX, mouseY);
+}
 
-/*function mouseClicked() {
-  if (display < n[rowCount-1].journal)
-    display += 1;
-}*/
+function touchMoved() {
+  moveEnd = createVector(mouseX, mouseY);
+  moveDelta = p5.Vector.sub(moveEnd, moveStart);
+}
 
 function touchEnded() {
-  strDischarged = 0;
-  strDeceased = 0;
+  translatePos.add(moveDelta);
+  moveDelta = createVector(0,0);
 
-  if (display < n[rowCount-1].journal)
-    display += 1;
+  if (display == 0) {
+    if (mouseX > windowWidth/2-150 && mouseX < windowWidth/2+150 &&
+        mouseY > windowHeight/2+210 && mouseY < windowHeight/2+270)
+      display = 1;
 
-  for (let r = 0; r < rowCount; r++) {
+  } else {
+    if ((mobile && mouseY > windowHeight-60) || 
+        (!mobile && mouseY > windowHeight-statusBarHeight && mouseX > 300)){
+      
+        strDischarged = 0;
+        strDeceased = 0;
 
-    if (n[r].journal <= display)
-      strConfirmed = id[r];
+      if (display < n[rowCount-1].journal)
+        display += 1;
 
-    if (n[r].endJournal <= display && n[r].endStatus == 1)
-      strDischarged ++;
-        if (n[r].endJournal <= display && n[r].endStatus == 2) 
-      strDeceased   ++;
+      for (let r = 0; r < rowCount; r++) {
+
+        if (n[r].journal <= display)
+          strConfirmed = id[r];
+
+        if (n[r].endJournal <= display && n[r].endStatus == 1)
+          strDischarged ++;
+            if (n[r].endJournal <= display && n[r].endStatus == 2) 
+          strDeceased   ++;
+        }
+      }
+    }
   }
-}
 
 class Node {
   constructor(i, j, c, cl, ej, es, x, y) {
