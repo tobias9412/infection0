@@ -170,22 +170,7 @@ function draw() {
   }
 
   pop();
-  if (mobile) { 
-    rectMode(CORNER);
-    fill (130);
-    rect(10, windowHeight-60, windowWidth-20, 50, 10);
-    fill(230);
-    textAlign(CENTER, CENTER);
-    text("下一日", windowWidth/2, windowHeight-35);
-  }
-  else {
-    rectMode(CORNER);
-    fill (130);
-    rect(300, windowHeight-statusBarHeight+20, windowWidth-320, statusBarHeight-30, 10);
-    fill(230);
-    textAlign(CENTER, CENTER);
-    text("下一日", 300+(windowWidth-320)/2, windowHeight-45);
-}
+  
   if (display == 0) {
     firstPopUpY = lerp(firstPopUpY, 0, 0.3);
 
@@ -218,6 +203,23 @@ function draw() {
   else {
     firstPopUpY = lerp(firstPopUpY, windowHeight/2+300, 0.3);
   
+  if (mobile) { 
+    rectMode(CORNER);
+    fill (130);
+    rect(10, windowHeight-55, windowWidth-20, 50, 10);
+    fill(230);
+    textAlign(CENTER, CENTER);
+    text("下一日", windowWidth/2, windowHeight-30);
+  }
+  else {
+    rectMode(CORNER);
+    fill (130);
+    rect(300, windowHeight-statusBarHeight+20, windowWidth-320, statusBarHeight-30, 10);
+    fill(230);
+    textAlign(CENTER, CENTER);
+    text("下一日", 300+(windowWidth-320)/2, windowHeight-45);
+  }
+
     //info display
     fill(50);
     noStroke();
