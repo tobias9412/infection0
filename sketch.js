@@ -254,9 +254,32 @@ function draw() {
     n[r].intensity = 0;
 }
 
+let deltaX, deltaY, pitchDist;
+
+function touchStarted() {
+  deltaX = mouseX;
+  deltaY = mouseY;
+  if (touches.length == 2) {
+  pitchDist = dist(touches[0].x, touches[0].y, touches[1].x, touches[1].y);
+  }
+}
+
 function touchMoved() {
-  translatePos.x += movedX;
-  translatePos.y += movedY;
+  deltaX = mouseX - deltaX;
+  deltaY = mouseY - deltaY;
+  translatePos.x += deltaX;
+  translatePos.y += deltaY;
+  deltaX = mouseX;
+  deltaY = mouseY;
+
+  if (touches.length == 2) 
+    pitchDist = dist(touches[0].x, touches[0].y, touches[1].x, touches[1].y) - pitchDist;
+  
+  fill(0);
+  text("dist: " + pitchDist, 30, 30);
+
+  if (touches.length == 2) 
+    pitchDist = dist(touches[0].x, touches[0].y, touches[1].x, touches[1].y);
 }
 
 function touchEnded() {
