@@ -8,7 +8,7 @@ let mobile, statusBarHeight;
 let oriWindowWidth, oriWindowHeight;
 let zoom = 1;
 
-let moveStart, moveEnd, translatePos;
+let translatePos;
 
 let n              = [];
 let id             = [];
@@ -106,7 +106,7 @@ function setup() {
 function draw() {
   background(200);
   push();
-  translate(p5.Vector.add(translatePos, moveDelta));
+  translate(translatePos);
   scale(zoom);
 
   fill(210);
@@ -124,11 +124,11 @@ function draw() {
                 n[r].pos.lerp(n[s].pos, 0.01);
                 n[s].pos.lerp(n[r].pos, 0.01);
               } else {
-                n[r].pos.lerp(n[s].pos, 0.001);
-                n[s].pos.lerp(n[r].pos, 0.001);
+                n[r].pos.lerp(n[s].pos, 0.005);
+                n[s].pos.lerp(n[r].pos, 0.005);
               }
 
-              if (n[n[s].id-1].journal <= display && n[r].intensity < 10){
+              if (n[n[s].id-1].journal <= display){
                 n[r].intensity++;
               }
             } 
@@ -156,7 +156,7 @@ function draw() {
         if (n[r].endJournal > display) {
           fill(127+n[r].intensity*30, 149, 0);
           noStroke();
-          ellipse(n[r].pos.x, n[r].pos.y, 10+n[r].intensity*log(5), 10+n[r].intensity*log(5));
+          ellipse(n[r].pos.x, n[r].pos.y, 15+n[r].intensity^2, 15+n[r].intensity^2);
         }
       }
     } 
@@ -166,17 +166,17 @@ function draw() {
         if(n[r].endStatus == 0) {
           fill(127+n[r].intensity*30, 149, 0);
           noStroke();
-          ellipse(n[r].pos.x, n[r].pos.y, 10+n[r].intensity*log(5), 10+n[r].intensity*log(5));
+          ellipse(n[r].pos.x, n[r].pos.y, 15+n[r].intensity^2, 15+n[r].intensity^2);
         }
         else if (n[r].endStatus == 1) {
           stroke(127+n[r].intensity*30, 149, 0);
           fill(210);
-          ellipse(n[r].pos.x, n[r].pos.y, 10+n[r].intensity*log(5), 10+n[r].intensity*log(5));
+          ellipse(n[r].pos.x, n[r].pos.y, 15+n[r].intensity^2, 15+n[r].intensity^2);
         } 
         else if (n[r].endStatus == 2) {
           noStroke();
           fill(20);
-          ellipse(n[r].pos.x, n[r].pos.y, 10+n[r].intensity*log(5), 10+n[r].intensity*log(5));
+          ellipse(n[r].pos.x, n[r].pos.y, 15+n[r].intensity^2, 15+n[r].intensity^2);
         } 
       }       
     }
@@ -254,23 +254,17 @@ function draw() {
     n[r].intensity = 0;
 }
 
-function touchStarted() {
-  moveStart = createVector(mouseX, mouseY);
-}
-
 function touchMoved() {
-  moveEnd = createVector(mouseX, mouseY);
-  moveDelta = p5.Vector.sub(moveEnd, moveStart);
+  translatePos.x += movedX;
+  translatePos.y += movedY;
 }
 
 function touchEnded() {
-  translatePos.add(moveDelta);
-  moveDelta = createVector(0,0);
-
   if (display == 0) {
     if (mouseX > windowWidth/2-150 && mouseX < windowWidth/2+150 &&
         mouseY > windowHeight/2+210 && mouseY < windowHeight/2+270)
       display = 1;
+          strConfirmed = 2;
 
   } else {
     if ((mobile && mouseY > windowHeight-60) || 
