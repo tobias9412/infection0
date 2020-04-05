@@ -254,14 +254,11 @@ function draw() {
     n[r].intensity = 0;
 }
 
-let deltaX, deltaY, pitchDist;
+let deltaX, deltaY;
 
 function touchStarted() {
   deltaX = mouseX;
   deltaY = mouseY;
-  if (touches.length == 2) {
-  pitchDist = dist(touches[0].x, touches[0].y, touches[1].x, touches[1].y);
-  }
 }
 
 function touchMoved() {
@@ -271,15 +268,6 @@ function touchMoved() {
   translatePos.y += deltaY;
   deltaX = mouseX;
   deltaY = mouseY;
-
-  if (touches.length == 2) 
-    pitchDist = dist(touches[0].x, touches[0].y, touches[1].x, touches[1].y) - pitchDist;
-  
-  fill(0);
-  text("dist: " + pitchDist, 30, 30);
-
-  if (touches.length == 2) 
-    pitchDist = dist(touches[0].x, touches[0].y, touches[1].x, touches[1].y);
 }
 
 function touchEnded() {
