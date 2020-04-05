@@ -42,6 +42,7 @@ function setup() {
   oriWindowHeight = windowHeight;
 
   createCanvas(windowWidth, windowHeight);
+  translate(windowWidth/2, windowHeight/2);
   rowCount = table.getRowCount();
 
   for (let r = 0; r < rowCount; r++) {
@@ -96,11 +97,14 @@ n[r] = new Node(id[r], journal[r], connected[r], classification[r], endJournal[r
 
 }
 
+let zoom = 1;
+
 function draw() {
   background(200);
 
   push();
   translate(p5.Vector.add(translatePos, moveDelta));
+  scale(zoom);
 
   if (display > 0) {
     for (let r = 0; r < rowCount; r++) {
@@ -287,6 +291,17 @@ function touchEnded() {
     }
   }
 
+function mouseWheel(event) {
+  if (event.delta>0 && zoom > 0){
+    zoom -= event.delta/event.delta/10;
+    translatePos.x += windowWidth/20;
+    translatePos.y += windowHeight/20;
+  } else {
+    zoom += event.delta/event.delta/10;
+    translatePos.x -= windowWidth/20;
+    translatePos.y -= windowHeight/20;
+  }
+}
 
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
