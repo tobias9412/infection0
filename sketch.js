@@ -1,7 +1,7 @@
 let table;
 let rowCount;
 let display = 0;
-let mindist = 75;
+let mindist = 50;
 
 let n              = [];
 let id             = [];
@@ -106,7 +106,7 @@ function draw() {
 
     for (let r = 0; r < rowCount; r++) {
       for (let s = 0; s < rowCount; s++) {
-        if (n[r].journal <= display && n[s].journal <= display && s != r) {
+        if (n[r].journal <= display && n[s].journal <= display && s > r) {
 
           // seperating
           if (p5.Vector.dist(n[r].pos, n[s].pos) < mindist) {
@@ -118,15 +118,15 @@ function draw() {
           for (let c = 0; c < n[r].connected.length; c++) {
             // when connected
             if (n[r].connected[c] == n[s].id) {
-              //strokeWeight(25);
-              //stroke(205);
+              strokeWeight(2);
+              stroke(50);
               //line(n[r].pos.x, n[r].pos.y, n[s].pos.x, n[s].pos.y);
 
               // cluster when connected
               if (p5.Vector.dist(n[r].pos, n[s].pos) > mindist*0.5) {
                 n[r].speed = p5.Vector.sub(n[r].pos, n[s].pos).normalize(); 
-                n[r].pos.sub(n[r].speed.mult(dist(n[r].pos.x, n[r].pos.y, n[s].pos.x, n[s].pos.y) / mindist * random(1)));
-                n[s].pos.sub(n[r].speed.mult(dist(n[r].pos.x, n[r].pos.y, n[s].pos.x, n[s].pos.y) / mindist * random(-1)));
+                n[r].pos.sub(n[r].speed.mult(dist(n[r].pos.x, n[r].pos.y, n[s].pos.x, n[s].pos.y) / mindist * random(1.5)));
+                n[s].pos.sub(n[r].speed.mult(dist(n[r].pos.x, n[r].pos.y, n[s].pos.x, n[s].pos.y) / mindist * random(-1.5)));
               }
               if (n[n[s].id-1].journal <= display){
                 n[r].intensity++;
