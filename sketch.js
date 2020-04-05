@@ -6,6 +6,7 @@ let mindist = 75;
 let firstPopUpY = 100;
 let mobile, statusBarHeight;
 let oriWindowWidth, oriWindowHeight;
+let zoom = 1;
 
 let moveStart, moveEnd, translatePos;
 
@@ -32,17 +33,23 @@ function setup() {
   translatePos = createVector(0,0);
   moveDelta = createVector(0,0);
 
-  if (windowWidth < 768) mobile = true;
-  else mobile = false;
+  createCanvas(windowWidth, windowHeight);
+  translate(windowWidth/2, windowHeight/2);
 
-  if (mobile) statusBarHeight = 170;
-  else statusBarHeight = 110;
+  if (windowWidth < 768) 
+    mobile = true;
+  else 
+    mobile = false;
+
+  if (mobile) 
+    statusBarHeight = 170;
+  else 
+    statusBarHeight = 110;
+  
 
   oriWindowWidth = windowWidth;
   oriWindowHeight = windowHeight;
 
-  createCanvas(windowWidth, windowHeight);
-  translate(windowWidth/2, windowHeight/2);
   rowCount = table.getRowCount();
 
   for (let r = 0; r < rowCount; r++) {
@@ -88,23 +95,22 @@ function setup() {
         break;
       }
 
-n[r] = new Node(id[r], journal[r], connected[r], classification[r], endJournal[r], endStatus[r], windowWidth / 2 - mindist/2 + random(mindist), windowHeight / 2 - mindist/2 + random(mindist));
-    console.log(n[r].id, n[r].journal, n[r].connected, n[r].classification, n[r].endJournal, n[r].endStatus); 
-  }
+  n[r] = new Node(id[r], journal[r], connected[r], classification[r], endJournal[r], endStatus[r], windowWidth / 2 - mindist/2 + random(mindist), windowHeight / 2 - mindist/2 + random(mindist));
+      console.log(n[r].id, n[r].journal, n[r].connected, n[r].classification, n[r].endJournal, n[r].endStatus); 
+    }
 
   textStyle(BOLD);
   textSize(20);
-
 }
-
-let zoom = 1;
 
 function draw() {
   background(200);
-
   push();
   translate(p5.Vector.add(translatePos, moveDelta));
   scale(zoom);
+
+  fill(210);
+  ellipse(windowWidth/2, windowHeight/2, 1024, 1024);
 
   if (display > 0) {
     for (let r = 0; r < rowCount; r++) {
@@ -114,22 +120,15 @@ function draw() {
           for (let c = 0; c < n[r].connected.length; c++) {
             // when connected
             if (n[r].connected[c] == n[s].id) {
-              //strokeWeight(2);
-              //stroke(50);
-              //line(n[r].pos.x, n[r].pos.y, n[s].pos.x, n[s].pos.y);
-
-              // cluster when connected
-              //if (p5.Vector.dist(n[r].pos, n[s].pos) > mindist) {
+              if (n[r].intensity < 5) {
                 n[r].pos.lerp(n[s].pos, 0.01);
                 n[s].pos.lerp(n[r].pos, 0.01);
-              //}    
+              } else {
+                n[r].pos.lerp(n[s].pos, 0.001);
+                n[s].pos.lerp(n[r].pos, 0.001);
+              }
 
-              //n[r].speed = p5.Vector.sub(n[r].pos, n[s].pos).normalize(); 
-              //n[r].pos.sub(n[r].speed.mult(dist(n[r].pos.x, n[r].pos.y, n[s].pos.x, n[s].pos.y) / mindist * random(1.5)));
-              //n[s].pos.sub(n[r].speed.mult(dist(n[r].pos.x, n[r].pos.y, n[s].pos.x, n[s].pos.y) / mindist * random(-1.5)));
-              //}
-
-              if (n[n[s].id-1].journal <= display){
+              if (n[n[s].id-1].journal <= display && n[r].intensity < 10){
                 n[r].intensity++;
               }
             } 
@@ -140,9 +139,15 @@ function draw() {
             n[r].speed = p5.Vector.sub(n[r].pos, n[s].pos).normalize();
             n[r].pos.add(n[r].speed.mult(mindist / dist(n[r].pos.x, n[r].pos.y, n[s].pos.x, n[s].pos.y)/10));
             n[s].pos.add(n[r].speed.mult(mindist / dist(n[r].pos.x, n[r].pos.y, n[s].pos.x, n[s].pos.y)/-10));
-         }
+          }
         }
       }
+
+      let cen = createVector(windowWidth/2, windowHeight/2);
+      if (p5.Vector.dist(n[r].pos, cen) > 256)
+        n[r].pos.lerp(cen, 0.001);
+      if (p5.Vector.dist(n[r].pos, cen) > 500)
+        n[r].pos.lerp(cen, 0.01);
     }
 
     //node display // hospitalised
@@ -165,7 +170,7 @@ function draw() {
         }
         else if (n[r].endStatus == 1) {
           stroke(127+n[r].intensity*30, 149, 0);
-          fill(200);
+          fill(210);
           ellipse(n[r].pos.x, n[r].pos.y, 10+n[r].intensity*log(5), 10+n[r].intensity*log(5));
         } 
         else if (n[r].endStatus == 2) {
