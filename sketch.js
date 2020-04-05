@@ -5,6 +5,7 @@ let mindist = 75;
 
 let firstPopUpY = 100;
 let mobile, statusBarHeight;
+let oriWindowWidth, oriWindowHeight;
 
 let moveStart, moveEnd, translatePos;
 
@@ -36,6 +37,9 @@ function setup() {
 
   if (mobile) statusBarHeight = 170;
   else statusBarHeight = 110;
+
+  oriWindowWidth = windowWidth;
+  oriWindowHeight = windowHeight;
 
   createCanvas(windowWidth, windowHeight);
   rowCount = table.getRowCount();
@@ -180,7 +184,7 @@ function draw() {
     rect(windowWidth/2, windowHeight/2+firstPopUpY, 360, 600, 15);
     fill(50);
     textAlign(CENTER, CENTER);
-    text("\n\n\n\n圖例\n\n\n\n\n\n\n\n\n關連的個案會為以聚集一起顯示，\n個案傳染影響越大，\n顏色越偏橙色，形狀越大。\n\n\n", windowWidth/2, windowHeight/2+firstPopUpY);
+    text("拖放或滑動以瀏覽畫面\n\n\n圖例\n\n\n\n\n\n\n\n\n關連的個案會為以聚集一起顯示，\n個案傳染影響越大，\n顏色越偏橙色，形狀越大。\n\n\n", windowWidth/2, windowHeight/2+firstPopUpY);
     textAlign(LEFT, CENTER);
     text("已出院個案\n\n死亡個案\n\n確診或疑似個案\n\n\n", windowWidth/2, windowHeight/2+firstPopUpY);
     fill(0, 0);
@@ -282,6 +286,22 @@ function touchEnded() {
       }
     }
   }
+
+
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+  translatePos.x += (windowWidth-oriWindowWidth)/2;
+  translatePos.y += (windowHeight-oriWindowHeight)/2;
+  oriWindowWidth = windowWidth;
+  oriWindowHeight = windowHeight;
+
+  if (windowWidth < 768) mobile = true;
+  else mobile = false;
+
+  if (mobile) statusBarHeight = 170;
+  else statusBarHeight = 110;
+
+}
 
 class Node {
   constructor(i, j, c, cl, ej, es, x, y) {
