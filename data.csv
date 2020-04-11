@@ -9,7 +9,7 @@ Journal,Report date,Case no.,Connection,Category,Classification,Gender,Age,End d
 4,1/26/2020,8,,,Imported,M,64,3/1/2020,39,Discharged
 7,1/29/2020,9,9,,Imported,F,73,3/12/2020,50,Discharged
 7,1/29/2020,10,10,,Imported,M,72,3/12/2020,50,Discharged
-8,1/30/2020,11,9/10,,Close contact of imported case,F,37,2/21/2020,30,Discharged
+8,1/30/2020,11,10-Sep,,Close contact of imported case,F,37,2/21/2020,30,Discharged
 8,1/30/2020,12,,,Possibly local,M,75,3/15/2020,53,Discharged
 9,1/31/2020,13,13,,Imported,M,39,2/4/2020,13,Deceased
 10,2/1/2020,14,,,Possibly local,M,80,2/18/2020,27,Discharged
@@ -67,7 +67,7 @@ Journal,Report date,Case no.,Connection,Category,Classification,Gender,Age,End d
 29,2/20/2020,66,57,,Possibly local,M,75,3/1/2020,39,Discharged
 29,2/20/2020,67,,,Local case ,F,38,3/12/2020,50,Discharged
 29,2/20/2020,68,,,Local case ,M,58,3/7/2020,45,Discharged
-29,2/20/2020,69,,,Local case ,M,48,3/9/2020,47,Discharged
+29,2/20/2020,69,,Police,Local case ,M,48,3/9/2020,47,Discharged
 31,2/22/2020,70,,NorthPoint Fook Wai Ching,Close contact of local case,F,96,,,
 32,2/23/2020,71,,Diamond Princess,Imported,M,68,3/12/2020,50,Discharged
 32,2/23/2020,72,,,Local case ,M,62,3/18/2020,56,Discharged
@@ -90,8 +90,8 @@ Journal,Report date,Case no.,Connection,Category,Classification,Gender,Age,End d
 35,2/26/2020,89,74,,Close contact of local case,M,80,3/13/2020,51,Deceased
 35,2/26/2020,90,85,,Close contact of local case,F,29,3/13/2020,51,Discharged
 35,2/26/2020,91,76,,Close contact of local case,M,26,3/5/2020,43,Discharged
-36,2/27/2020,92,92/65/70/73/74/76/77/83/86/89/93/98/102/103,NorthPoint Fook Wai Ching,Close contact of local case,F,70,3/14/2020,52,Discharged
-36,2/27/2020,93,93/65/70/73/74/76/77/83/86/89/92/98/102/103,NorthPoint Fook Wai Ching,Close contact of local case,F,89,3/24/2020,62,Discharged
+36,2/27/2020,92,,NorthPoint Fook Wai Ching,Close contact of local case,F,70,3/14/2020,52,Discharged
+36,2/27/2020,93,,NorthPoint Fook Wai Ching,Close contact of local case,F,89,3/24/2020,62,Discharged
 37,2/28/2020,94,,Diamond Princess,Imported,F,61,3/6/2020,44,Discharged
 38,2/29/2020,95,92,,Close contact of local case,F,46,3/15/2020,53,Discharged
 39,3/1/2020,96,,Diamond Princess,Imported,F,68,3/10/2020,48,Discharged
@@ -426,7 +426,7 @@ Journal,Report date,Case no.,Connection,Category,Classification,Gender,Age,End d
 64,3/26/2020,425,,,Imported,M,18,,,
 64,3/26/2020,426,,,Imported,F,19,,,
 64,3/26/2020,427,,,Imported,F,74,,,
-64,3/26/2020,428,,Pub,Close contact of local case,F,22,,,
+64,3/26/2020,428,,Police,Close contact of local case,F,22,,,
 64,3/26/2020,429,,Cheung Sha Wan Ind Building,Close contact of local case,F,48,,,
 64,3/26/2020,430,,,Imported,F,19,,,
 64,3/26/2020,431,,,Imported,M,20,4/3/2020,72,Discharged
@@ -661,7 +661,7 @@ Journal,Report date,Case no.,Connection,Category,Classification,Gender,Age,End d
 68,3/30/2020,660,,,Imported,F,20,4/6/2020,75,Discharged
 68,3/30/2020,661,,,Imported,F,21,4/5/2020,74,Discharged
 68,3/30/2020,662,,RedMR,Close contact of local case,M,28,,,
-68,3/30/2020,663,,,Local case,M,31,,,
+68,3/30/2020,663,,Police,Local case,M,31,,,
 68,3/30/2020,664,,,Imported,F,17,,,
 68,3/30/2020,665,666,,Imported,F,59,,,
 68,3/30/2020,666,665,,Imported,M,65,,,
@@ -852,7 +852,7 @@ Journal,Report date,Case no.,Connection,Category,Classification,Gender,Age,End d
 73,4/4/2020,851,,,Imported,F,21,,,
 73,4/4/2020,852,,,Imported,F,18,,,
 73,4/4/2020,853,,,Imported,M,23,4/7/2020,76,Discharged
-73,4/4/2020,854,663,Police Kowloon West,Local case,M,46,,,
+73,4/4/2020,854,663,Police,Local case,M,46,,,
 73,4/4/2020,855,428,,Close contact of local case,F,36,,,
 73,4/4/2020,856,,,Close contact of possibly local ,M,93,,,
 73,4/4/2020,857,,,Local case,M,71,,,

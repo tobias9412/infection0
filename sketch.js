@@ -15,6 +15,7 @@ let id             = [];
 let journal        = [];
 let date           = [];
 let connection     = [];
+let category       = [];
 let classification = [];
 let connected      = [];
 let endJournal     = [];
@@ -23,7 +24,6 @@ let endStatus      = [];
 let strConfirmed  = 0;
 let strDischarged = 0;
 let strDeceased   = 0;
-
 
 function preload() {
   table = loadTable('https://raw.githubusercontent.com/tobias9412/infection0/master/data.csv',  'csv', 'header');
@@ -60,6 +60,7 @@ function setup() {
     connection[r] = table.get(r, 'Connection');
     connected[r] = [];
     connected[r] = int(split(connection[r], '/'));
+    category[r] = table.get(r, 'Category');
 
     switch (table.get(r, "Classification")) {
       case "Imported":
@@ -95,8 +96,8 @@ function setup() {
         break;
       }
 
-  n[r] = new Node(id[r], journal[r], connected[r], classification[r], endJournal[r], endStatus[r], windowWidth / 2 - mindist/2 + random(mindist), windowHeight / 2 - mindist/2 + random(mindist));
-      console.log(n[r].id, n[r].journal, n[r].connected, n[r].classification, n[r].endJournal, n[r].endStatus); 
+  n[r] = new Node(id[r], journal[r], connected[r], category[r], classification[r], endJournal[r], endStatus[r], windowWidth / 2 - mindist/2 + random(mindist), windowHeight / 2 - mindist/2 + random(mindist));
+      console.log(n[r].id, n[r].journal, n[r].connected, n[r].category, n[r].classification, n[r].endJournal, n[r].endStatus); 
     }
 
   textStyle(BOLD);
@@ -112,25 +113,31 @@ function draw() {
   fill(210);
   ellipse(windowWidth/2, windowHeight/2, 1024, 1024);
 
+    //reset intensity
+  for (let r = 0; r < rowCount; r++) 
+    n[r].intensity = 0;
+
   if (display > 0) {
     for (let r = 0; r < rowCount; r++) {
       for (let s = 0; s < rowCount; s++) {
         if (n[r].journal <= display && n[s].journal <= display && s > r) {
 
+            //category
+          if (n[r].category == n[s].category && n[r].category != "") {
+            if (n[r].intensity < 15)
+              n[r].intensity ++;
+
+          if (n[r].intensity < 10)
+           n[r].pos.lerp(n[s].pos, 0.005);
+          else 
+            n[r].pos.lerp(n[s].pos, 0.001);
+          }
+
           for (let c = 0; c < n[r].connected.length; c++) {
             // when connected
             if (n[r].connected[c] == n[s].id) {
-              if (n[r].intensity < 5) {
-                n[r].pos.lerp(n[s].pos, 0.01);
-                n[s].pos.lerp(n[r].pos, 0.01);
-              } else {
-                n[r].pos.lerp(n[s].pos, 0.005);
-                n[s].pos.lerp(n[r].pos, 0.005);
-              }
-
-              if (n[n[s].id-1].journal <= display){
-                n[r].intensity++;
-              }
+                n[r].pos.lerp(n[s].pos, 0.1);
+                n[s].pos.lerp(n[r].pos, 0.1);
             } 
           }
 
@@ -145,9 +152,9 @@ function draw() {
 
       let cen = createVector(windowWidth/2, windowHeight/2);
       if (p5.Vector.dist(n[r].pos, cen) > 256)
-        n[r].pos.lerp(cen, 0.001);
+        n[r].pos.lerp(cen, 0.002);
       if (p5.Vector.dist(n[r].pos, cen) > 500)
-        n[r].pos.lerp(cen, 0.01);
+        n[r].pos.lerp(cen, 0.005);
     }
 
     //node display // hospitalised
@@ -183,7 +190,17 @@ function draw() {
   }
 
   pop();
-  
+  fill(50, alpha);
+  for (let r = 0; r < rowCount; r++) {
+    if (n[r].journal <= display) {
+        if (mouseX-translatePos.x > n[r].pos.x-10 && mouseX-translatePos.x < n[r].pos.x+10 &&
+            mouseY-translatePos.y > n[r].pos.y-10 && mouseY-translatePos.y < n[r].pos.y+10) {
+            text(n[r].category, mouseX, mouseY-20);
+        }
+      }
+    }
+
+
   if (display == 0) {
     firstPopUpY = lerp(firstPopUpY, 0, 0.3);
 
@@ -250,8 +267,6 @@ function draw() {
     textAlign(LEFT, TOP);
     text("已出院個案：　　 " + strDischarged + "宗\n死亡個案：　　　 " + strDeceased + "宗\n確診或疑似個案： " + strConfirmed　+ "宗", 10, windowHeight-statusBarHeight+35);
   }
-  for (let r = 0; r < rowCount; r++) 
-    n[r].intensity = 0;
 }
 
 let deltaX, deltaY;
@@ -329,7 +344,7 @@ function windowResized() {
 }
 
 class Node {
-  constructor(i, j, c, cl, ej, es, x, y) {
+  constructor(i, j, c, ca, cl, ej, es, x, y) {
     this.id = i;
     this.journal = j;
     this.connected = c;
@@ -338,5 +353,62 @@ class Node {
     this.endStatus = es;
     this.pos = createVector(x, y);
     this.intensity = 0;
+
+    switch(ca){
+      case "0126 Party Room":
+      this.category = "party room\n火鍋群組";
+      break;
+      case "NorthPoint Fook Wai Ching":
+      this.category = "北角福慧精舍\n佛堂群組";
+      break;
+      case "Diamond Princess":
+      this.category = "鑽石公主號乘客";
+      break;
+      case "India Trip":
+      this.category = "印度旅行團群組";
+      break;
+      case "Hubei":
+      this.category = "湖北返港人士";
+      break;
+      case "Egypt Trip":
+      this.category = "埃及旅行團群組";
+      break;
+      case "0314 Wong Chuk Hang Party":
+      this.category = "黃竹坑派對群組";
+      break;
+      case "Karate":
+      this.category = "空手道運動員群組";
+      break;
+      case "Pub":
+      this.category = "酒吧群組";
+      break;
+      case "Pure Fitness":
+      this.category = "蘭桂坊Pure Fitness群組";
+      break;
+      case "Wedding":
+      this.category = "愉景灣婚禮群組";
+      break;
+      case "Bolivia Trip":
+      this.category = "玻利維亞\n旅行團群組";
+      break;
+      case "Cheung Sha Wan Ind Building":
+      this.category = "長沙灣工廈群組";
+      break;
+      case "RedMR":
+      this.category = "Red MR群組";
+      break;
+      case "Police":
+      this.category = "警員";
+      break;
+      case "MS":
+      this.category = "馬莎卡拉OK群組";
+      break;
+      case "Peru":
+      this.category = "秘魯旅行團群組";
+      break;
+      default:
+this.category = ca;
+break;
+    }
   }
 }
