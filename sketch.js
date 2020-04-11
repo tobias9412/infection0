@@ -348,67 +348,11 @@ class Node {
     this.id = i;
     this.journal = j;
     this.connected = c;
+    this.category = ca;
     this.classification = cl;
     this.endJournal = ej;
     this.endStatus = es;
     this.pos = createVector(x, y);
     this.intensity = 0;
-
-    switch(ca){
-      case "0126 Party Room":
-      this.category = "party room\n火鍋群組";
-      break;
-      case "NorthPoint Fook Wai Ching":
-      this.category = "北角福慧精舍\n佛堂群組";
-      break;
-      case "Diamond Princess":
-      this.category = "鑽石公主號乘客";
-      break;
-      case "India Trip":
-      this.category = "印度旅行團群組";
-      break;
-      case "Hubei":
-      this.category = "湖北返港人士";
-      break;
-      case "Egypt Trip":
-      this.category = "埃及旅行團群組";
-      break;
-      case "0314 Wong Chuk Hang Party":
-      this.category = "黃竹坑派對群組";
-      break;
-      case "Karate":
-      this.category = "空手道運動員群組";
-      break;
-      case "Pub":
-      this.category = "酒吧群組";
-      break;
-      case "Pure Fitness":
-      this.category = "蘭桂坊Pure Fitness群組";
-      break;
-      case "Wedding":
-      this.category = "愉景灣婚禮群組";
-      break;
-      case "Bolivia Trip":
-      this.category = "玻利維亞\n旅行團群組";
-      break;
-      case "Cheung Sha Wan Ind Building":
-      this.category = "長沙灣工廈群組";
-      break;
-      case "RedMR":
-      this.category = "Red MR群組";
-      break;
-      case "Police":
-      this.category = "警員";
-      break;
-      case "MS":
-      this.category = "馬莎卡拉OK群組";
-      break;
-      case "Peru":
-      this.category = "秘魯旅行團群組";
-      break;
-      default:
-this.category = ca;
-break;
-    }
   }
 }
