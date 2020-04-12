@@ -6,7 +6,6 @@ let mindist = 75;
 let firstPopUpY = 100;
 let mobile, statusBarHeight;
 let oriWindowWidth, oriWindowHeight;
-let zoom = 1;
 
 let translatePos;
 
@@ -61,27 +60,7 @@ function setup() {
     connected[r] = [];
     connected[r] = int(split(connection[r], '/'));
     category[r] = table.get(r, 'Category');
-
-    switch (table.get(r, "Classification")) {
-      case "Imported":
-        classification[r] = 0;
-        break;
-      case "Close contact of imported case":
-        classification[r] = 1;
-        break;
-      case "Possibly local":
-        classification[r] = 2;
-        break;
-      case "Close contact of possibly local":
-        classification[r] = 3;
-        break;
-      case "Local case":
-        classification[r] = 4;
-        break;
-      case "Close contact of local case":
-        classification[r] = 5;
-        break;
-    }
+    classification[r] = table.get(r, "Classification");
 
     endJournal[r] = table.get(r, 'End journal');
     switch (table.get(r, 'End status')) {
@@ -102,13 +81,13 @@ function setup() {
 
   textStyle(BOLD);
   textSize(20);
+  graphs();
 }
 
 function draw() {
   background(200);
   push();
   translate(translatePos);
-  scale(zoom);
 
   fill(210);
   ellipse(windowWidth/2, windowHeight/2, 1024, 1024);
@@ -269,6 +248,78 @@ function draw() {
   }
 }
 
+var counter = [];
+var j = 1;
+var data = [];
+function graphs() {
+  for (let i = 0; i < 9; i++) {
+    data[i] = [];
+    counter[i] = 0;
+  }
+    while (j <= n[rowCount-1].journal) {
+      counter[7] = 0;
+      counter[8] = 0;
+     for (let r = 0; r < rowCount; r++) {
+          if (n[r].journal == j) {
+            counter[0]++;
+            if (n[r].classification == "Imported")
+              counter[1]++;
+            if (n[r].classification == "Close contact of imported case")
+              counter[2]++;
+            if (n[r].classification == "Local case")
+              counter[3]++;
+            if (n[r].classification == "Close contact of local case")
+              counter[4]++;
+            if (n[r].classification == "Possibly local")
+              counter[5]++;
+            if (n[r].classification == "Close contact of possibly local ")
+              counter[6]++;
+          }
+          if (n[r].endJournal <= j) {
+            if (n[r].endStatus == 1) 
+              counter[7]++;
+            if (n[r].endStatus == 2) 
+              counter[8]++;
+          }
+        }
+      for (let i = 0; i < 9; i++) 
+        data[i][j] = counter[i];
+      j++;
+    }
+    console.log(data);
+
+    var max = 1000;
+
+    for (let i = 0; i < 7; i++) {
+      var str = "";
+      for (let d = 1; d < data[0].length; d++) {
+        str = str + d + "," + (max-data[i][d]) + " ";
+      }
+      console.log(i +":"+ str + (data[0].length-1) +","+ max);
+    }
+
+    //i==7
+    var str = "";
+    for (let d = 1; d < data[7].length; d++) 
+      str = str + d + "," + (max-data[0][d]+data[7][d]) + " ";
+    for (let d = data[0].length-1; d > 0; d--)
+      str = str + d + "," + (max-data[0][d]) + " ";
+    console.log(7 +":"+ str);
+
+    //i==8
+    var str = "";
+    for (let d = 1; d < data[8].length; d++) 
+      str = str + d + "," + (max-data[0][d]+data[8][d]) + " ";
+    for (let d = data[0].length-1; d > 0; d--)
+      str = str + d + "," + (max-data[0][d]) + " ";
+    console.log(8 +":"+ str);
+
+
+
+
+
+}
+
 let deltaX, deltaY;
 
 function touchStarted() {
@@ -315,18 +366,6 @@ function touchEnded() {
       }
     }
   }
-
-function mouseWheel(event) {
-  if (event.delta>0 && zoom > 0){
-    zoom -= event.delta/event.delta/10;
-    translatePos.x += windowWidth/20;
-    translatePos.y += windowHeight/20;
-  } else {
-    zoom += event.delta/event.delta/10;
-    translatePos.x -= windowWidth/20;
-    translatePos.y -= windowHeight/20;
-  }
-}
 
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
