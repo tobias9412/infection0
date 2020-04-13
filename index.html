@@ -7,6 +7,7 @@
     <script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.js"></script>
     <script src="https://unpkg.com/papaparse@latest/papaparse.min.js"></script>
     <script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+    <script src="reset.css"></script>
     <style>
       html, body {
         padding: 0;
@@ -24,26 +25,39 @@
         width: 100%;
         height: 100%;
         top: 0;
+        z-index: -10;
       }
 
       .graphs {
         position: absolute;
+        top: 100%;
         display:block;
-        top: 120%;
         float:left;
         width: 100%;
         color: #000;
-      }
+     }
 
-      h1 {
-        position: absolute;
-        z-index: 99;
-      }
+     svg {
+        display: block;
+        clear: left;
+        margin: auto;
+        margin-bottom: 100px;
+        vertical-align:top;
+     }
 
-      ul {
-        position: absolute;
-        top: 50px;
+     .graphs div {
         z-index: 99;
+        width: 100%;
+        margin: auto;
+        text-align: left;
+        list-style-type: none;
+     }
+
+      li {
+        width: 100%;
+        float:left;
+        display: block;
+        text-decoration: none;
       }
 
       polygon {
@@ -56,15 +70,14 @@
   <body>
     <script src="sketch.js"></script>
     <scction class="graphs">
-      <div>
-        <h1>heading</h1>
-        <ul>
-          <li id="graph1-click1">輸入個案<br>輸入個案的密切接觸者</li><br>
-          <li id="graph1-click2">本地個案<br>本地個案的密切接觸者</li><br>
-          <li id="graph1-click3">可能本地個案<br>可能本地個案的密切接觸者</li><br>
-          <li id="graph1-click0">確診及疑似個案<br>已出院個案<br>死亡個案</li>
-        </ul>
-        <svg width="79" height="1000" id="stackedArea">
+        <div>
+        <h1>香港2019冠狀病毒病個案統計</h1>
+          <li id="graph1-click1">輸入個案<br>輸入個案的密切接觸者</li>
+          <li id="graph1-click2">本地個案<br>本地個案的密切接觸者</li>
+          <li id="graph1-click3">可能本地個案<br>可能本地個案的密切接觸者</li>
+          <li id="graph1-click0">確診及疑似個案<br>已出院個案和死亡個案</li>
+        </div>   
+        <svg width="90%" height="600" id="stackedArea">
 
           <!--0:all-->
           <polygon id="graph1-0" fill="#eee" points="1,998 2,995 3,995 4,992 5,992 6,992 7,990 8,988 9,987 10,986 11,985 12,985 13,982 14,979 15,976 16,974 17,974 18,964 19,958 20,951 21,950 22,947 23,944 24,944 25,943 26,940 27,938 28,935 29,931 30,931 31,930 32,925 33,919 34,915 35,909 36,907 37,906 38,905 39,900 40,899 41,899 42,895 43,895 44,892 45,890 46,885 47,884 48,879 49,870 50,868 51,862 52,858 53,851 54,842 55,832 56,807 57,791 58,743 59,726 60,682 61,643 62,613 63,589 64,546 65,481 66,417 67,358 68,317 69,285 70,234 71,197 72,154 73,137 74,109 75,85 76,64 77,39 78,26 79,10 79,1000"/>
@@ -86,24 +99,29 @@
           <!--8:Deceased-->
           <polygon id="graph1-8" fill="#000" points="1,998 2,995 3,995 4,992 5,992 6,992 7,990 8,988 9,987 10,986 11,985 12,985 13,983 14,980 15,977 16,975 17,975 18,965 19,959 20,952 21,951 22,948 23,945 24,945 25,944 26,941 27,939 28,937 29,933 30,933 31,932 32,927 33,921 34,917 35,911 36,909 37,908 38,907 39,902 40,901 41,901 42,897 43,897 44,894 45,892 46,888 47,887 48,882 49,873 50,871 51,866 52,862 53,855 54,846 55,836 56,811 57,795 58,747 59,730 60,686 61,647 62,617 63,593 64,550 65,485 66,421 67,362 68,321 69,289 70,238 71,201 72,158 73,141 74,113 75,89 76,68 77,43 78,30 79,14 79,10 78,26 77,39 76,64 75,85 74,109 73,137 72,154 71,197 70,234 69,285 68,317 67,358 66,417 65,481 64,546 63,589 62,613 61,643 60,682 59,726 58,743 57,791 56,807 55,832 54,842 53,851 52,858 51,862 50,868 49,870 48,879 47,884 46,885 45,890 44,892 43,895 42,895 41,899 40,899 39,900 38,905 37,906 36,907 35,909 34,915 33,919 32,925 31,930 30,931 29,931 28,935 27,938 26,940 25,943 24,944 23,944 22,947 21,950 20,951 19,958 18,964 17,974 16,974 15,976 14,979 13,982 12,985 11,985 10,986 9,987 8,988 7,990 6,992 5,992 4,992 3,995 2,995 1,998"/> 
         </svg>
-      </div>
+
+       
     </scction>
     <script>
       $( document ).ready(function() {
-        resizeGraph("#stackedArea");
+        resizeGraph("polygon");
       });
 
       $( window ).resize(function() {
-        resizeGraph("#stackedArea");
+        resizeGraph("polygon");
       });
 
       function resizeGraph(id) {
-        var sX = $( window ).width() / $(id).width();
-        var sY = $( window ).height() / $(id).height()*0.6;
+        var s = "scale(" + ($(id).parent().width()/80) + "," + ($(id).parent().height()/1000) + ")";
+        $(id).attr({"transform": s});
+
+      /*var sX = $( window ).width()*0.95 / $(id).getBoundingClientRect().width;
+        var sY = 600 / $(id).height();
         var s = "scale(" + sX + "," + sY + ")";
         var w = ($( window ).width() - $(id).width())/2;
-        var l = ($( window ).height() - $(id).height())/2*0.6;
-        $(id).css({"transform": s, "margin-left": w, "margin-bottom": l});
+        var l = -($( window ).height() - $(id).height())/2;
+        console.log(sX)
+        $(id).css({"transform": s, "margin-left": w, "margin-top": l});*/
       }
 
       $( "#graph1-click1" )
