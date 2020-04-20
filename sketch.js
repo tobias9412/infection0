@@ -24,8 +24,6 @@ let strConfirmed  = 0;
 let strDischarged = 0;
 let strDeceased   = 0;
 
-let g=0;
-
 function preload() {
   table = loadTable('https://raw.githubusercontent.com/tobias9412/infection0/master/data.csv',  'csv', 'header');
 }
@@ -99,7 +97,6 @@ function draw() {
 
   if (display > 0) {
       for (let r = 0; r < rowCount; r++) {
-        n[r].grid = grid(r);
         for (let s = 0; s < rowCount; s++) {
           if (n[r].journal <= display && n[s].journal <= display && s > r) {
 
@@ -122,9 +119,10 @@ function draw() {
               } 
             }
 
+
             // seperating
-            if (n[r].grid == g) {
-              if (p5.Vector.dist(n[r].pos, n[s].pos) < mindist) {
+              if (n[r].connected.length <= 1 && n[s].connected.length <= 1) {
+                if (p5.Vector.dist(n[r].pos, n[s].pos) < mindist) {
                 n[r].speed = p5.Vector.sub(n[r].pos, n[s].pos).normalize();
                 n[r].pos.add(n[r].speed.mult(mindist / dist(n[r].pos.x, n[r].pos.y, n[s].pos.x, n[s].pos.y)/10));
                 n[s].pos.add(n[r].speed.mult(mindist / dist(n[r].pos.x, n[r].pos.y, n[s].pos.x, n[s].pos.y)/-10));
@@ -135,10 +133,12 @@ function draw() {
 
 
       let cen = createVector(windowWidth/2, windowHeight/2);
-      if (p5.Vector.dist(n[r].pos, cen) > 256)
-        n[r].pos.lerp(cen, 0.002);
-      if (p5.Vector.dist(n[r].pos, cen) > 500)
-        n[r].pos.lerp(cen, 0.005);
+      if (n[r].journal <= display){
+        if (p5.Vector.dist(n[r].pos, cen) > 256)
+          n[r].pos.lerp(cen, 0.002);
+        if (p5.Vector.dist(n[r].pos, cen) > 500)
+          n[r].pos.lerp(cen, 0.005);
+      }
     }
 
     //node display // hospitalised
@@ -251,10 +251,6 @@ function draw() {
     textAlign(LEFT, TOP);
     text("已出院個案：　　 " + strDischarged + "宗\n死亡個案：　　　 " + strDeceased + "宗\n確診或疑似個案： " + strConfirmed　+ "宗", 10, windowHeight-statusBarHeight+35);
   }
-
-  g++;
-  if (g == 5) 
-    g=0;
   console.log(frameRate());
 }
 
@@ -320,22 +316,6 @@ function windowResized() {
 
 }
 
-function grid(i) {
-    if (n[i].pos.x < windowWidth/2 && n[i].pos.y < windowWidth/2)
-      return 0;
-    else if (n[i].pos.x >= windowWidth/2 && n[i].pos.y < windowWidth/2)
-      return 1;
-    else if (n[i].pos.x < windowWidth/2 && n[i].pos.y >= windowWidth/2)
-      return 2;
-    else if (n[i].pos.x >= windowWidth/2 && n[i].pos.y >= windowWidth/2)
-      return 3;
-    else if (n[i].pos.x > windowWidth/4*1 && n[i].pos.y > windowWidth/4*1 &&
-             n[i].pos.x < windowWidth/4*3 && n[i].pos.y < windowWidth/4*3)
-      return 4;
-    else 
-      return 0;
-}
-
 class Node {
   constructor(i, j, c, ca, cl, ej, es, x, y) {
     this.id = i;
@@ -347,6 +327,5 @@ class Node {
     this.endStatus = es;
     this.pos = createVector(x, y);
     this.intensity = 0;
-    this.grid = 0;
   }
 }
