@@ -121,7 +121,7 @@ function draw() {
 
 
             // seperating
-              if (n[r].connected.length <= 1 && n[s].connected.length <= 1) {
+              if (n[r].connected.length == n[s].connected.length) {
                 if (p5.Vector.dist(n[r].pos, n[s].pos) < mindist) {
                 n[r].speed = p5.Vector.sub(n[r].pos, n[s].pos).normalize();
                 n[r].pos.add(n[r].speed.mult(mindist / dist(n[r].pos.x, n[r].pos.y, n[s].pos.x, n[s].pos.y)/10));
