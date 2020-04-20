@@ -328,3 +328,4 @@ class Node {
     this.pos = createVector(x, y);
     this.intensity = 0;
   }
+}
