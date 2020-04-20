@@ -24,9 +24,6 @@ let strConfirmed  = 0;
 let strDischarged = 0;
 let strDeceased   = 0;
 
-let g=0;
-
-
 function preload() {
   table = loadTable('https://raw.githubusercontent.com/tobias9412/infection0/master/data.csv',  'csv', 'header');
 }
@@ -100,39 +97,36 @@ function draw() {
 
   if (display > 0) {
       for (let r = 0; r < rowCount; r++) {
-        n[r].grid = grid(r);
         for (let s = 0; s < rowCount; s++) {
           if (n[r].journal <= display && n[s].journal <= display && s > r) {
-
-            // seperating
-              if (n[s].grid == g) {
-                if (p5.Vector.dist(n[r].pos, n[s].pos) < mindist) {
-                n[r].speed = p5.Vector.sub(n[r].pos, n[s].pos).normalize();
-                n[r].pos.add(n[r].speed.mult(mindist / dist(n[r].pos.x, n[r].pos.y, n[s].pos.x, n[s].pos.y)/15));
-                //n[s].pos.add(n[r].speed.mult(mindist / dist(n[r].pos.x, n[r].pos.y, n[s].pos.x, n[s].pos.y)/-10));
-              }
-            }
 
               //category
             if (n[r].category == n[s].category && n[r].category != "") {
               if (n[r].intensity < 15)
                 n[r].intensity ++;
 
-              if (n[s].grid == g) {
-                if (n[r].intensity < 10)
-                 n[r].pos.lerp(n[s].pos, 0.005);
-                else 
-                  n[r].pos.lerp(n[s].pos, 0.001);
-                }
-              }
-
+            if (n[r].intensity < 10)
+             n[r].pos.lerp(n[s].pos, 0.005);
+            else 
+              n[r].pos.lerp(n[s].pos, 0.001);
+            }
 
             for (let c = 0; c < n[r].connected.length; c++) {
               // when connected
               if (n[r].connected[c] == n[s].id) {
                   n[r].pos.lerp(n[s].pos, 0.1);
-                  //n[s].pos.lerp(n[r].pos, 0.01);
+                  n[s].pos.lerp(n[r].pos, 0.1);
               } 
+            }
+
+
+            // seperating
+              if (n[r].connected.length == n[s].connected.length) {
+                if (p5.Vector.dist(n[r].pos, n[s].pos) < mindist) {
+                n[r].speed = p5.Vector.sub(n[r].pos, n[s].pos).normalize();
+                n[r].pos.add(n[r].speed.mult(mindist / dist(n[r].pos.x, n[r].pos.y, n[s].pos.x, n[s].pos.y)/10));
+                n[s].pos.add(n[r].speed.mult(mindist / dist(n[r].pos.x, n[r].pos.y, n[s].pos.x, n[s].pos.y)/-10));
+              }
             }
           }
         }
@@ -140,8 +134,8 @@ function draw() {
 
       let cen = createVector(windowWidth/2, windowHeight/2);
       if (n[r].journal <= display){
- //       if (p5.Vector.dist(n[r].pos, cen) > 256)
- //         n[r].pos.lerp(cen, 0.002);
+        if (p5.Vector.dist(n[r].pos, cen) > 256)
+          n[r].pos.lerp(cen, 0.002);
         if (p5.Vector.dist(n[r].pos, cen) > 500)
           n[r].pos.lerp(cen, 0.005);
       }
@@ -257,10 +251,6 @@ function draw() {
     textAlign(LEFT, TOP);
     text("已出院個案：　　 " + strDischarged + "宗\n死亡個案：　　　 " + strDeceased + "宗\n確診或疑似個案： " + strConfirmed　+ "宗", 10, windowHeight-statusBarHeight+35);
   }
-
-  g++;
-  if (g == 4) 
-    g=0;
   console.log(frameRate());
 }
 
@@ -323,19 +313,7 @@ function windowResized() {
 
   if (mobile) statusBarHeight = 170;
   else statusBarHeight = 110;
-}
 
-function grid(i) {
-    if (n[i].pos.x < windowWidth/2 && n[i].pos.y < windowWidth/2)
-      return 0;
-    else if (n[i].pos.x >= windowWidth/2 && n[i].pos.y < windowWidth/2)
-      return 1;
-    else if (n[i].pos.x < windowWidth/2 && n[i].pos.y >= windowWidth/2)
-      return 2;
-    else if (n[i].pos.x >= windowWidth/2 && n[i].pos.y >= windowWidth/2)
-      return 3;
-    else 
-      return 0;
 }
 
 class Node {
@@ -349,6 +327,4 @@ class Node {
     this.endStatus = es;
     this.pos = createVector(x, y);
     this.intensity = 0;
-    this.grid = 0;
   }
-}
