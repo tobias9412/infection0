@@ -24,6 +24,8 @@ let strConfirmed  = 0;
 let strDischarged = 0;
 let strDeceased   = 0;
 
+let g=0;
+
 function preload() {
   table = loadTable('https://raw.githubusercontent.com/tobias9412/infection0/master/data.csv',  'csv', 'header');
 }
@@ -81,7 +83,6 @@ function setup() {
 
   textStyle(BOLD);
   textSize(20);
-  graphs();
 }
 
 function draw() {
@@ -97,37 +98,41 @@ function draw() {
     n[r].intensity = 0;
 
   if (display > 0) {
-    for (let r = 0; r < rowCount; r++) {
-      for (let s = 0; s < rowCount; s++) {
-        if (n[r].journal <= display && n[s].journal <= display && s > r) {
+      for (let r = 0; r < rowCount; r++) {
+        n[r].grid = grid(r);
+        for (let s = 0; s < rowCount; s++) {
+          if (n[r].journal <= display && n[s].journal <= display && s > r) {
 
-            //category
-          if (n[r].category == n[s].category && n[r].category != "") {
-            if (n[r].intensity < 15)
-              n[r].intensity ++;
+              //category
+            if (n[r].category == n[s].category && n[r].category != "") {
+              if (n[r].intensity < 15)
+                n[r].intensity ++;
 
-          if (n[r].intensity < 10)
-           n[r].pos.lerp(n[s].pos, 0.005);
-          else 
-            n[r].pos.lerp(n[s].pos, 0.001);
-          }
+            if (n[r].intensity < 10)
+             n[r].pos.lerp(n[s].pos, 0.005);
+            else 
+              n[r].pos.lerp(n[s].pos, 0.001);
+            }
 
-          for (let c = 0; c < n[r].connected.length; c++) {
-            // when connected
-            if (n[r].connected[c] == n[s].id) {
-                n[r].pos.lerp(n[s].pos, 0.1);
-                n[s].pos.lerp(n[r].pos, 0.1);
-            } 
-          }
+            for (let c = 0; c < n[r].connected.length; c++) {
+              // when connected
+              if (n[r].connected[c] == n[s].id) {
+                  n[r].pos.lerp(n[s].pos, 0.1);
+                  n[s].pos.lerp(n[r].pos, 0.1);
+              } 
+            }
 
-          // seperating
-          if (p5.Vector.dist(n[r].pos, n[s].pos) < mindist) {
-            n[r].speed = p5.Vector.sub(n[r].pos, n[s].pos).normalize();
-            n[r].pos.add(n[r].speed.mult(mindist / dist(n[r].pos.x, n[r].pos.y, n[s].pos.x, n[s].pos.y)/10));
-            n[s].pos.add(n[r].speed.mult(mindist / dist(n[r].pos.x, n[r].pos.y, n[s].pos.x, n[s].pos.y)/-10));
+            // seperating
+            if (n[r].grid == g) {
+              if (p5.Vector.dist(n[r].pos, n[s].pos) < mindist) {
+                n[r].speed = p5.Vector.sub(n[r].pos, n[s].pos).normalize();
+                n[r].pos.add(n[r].speed.mult(mindist / dist(n[r].pos.x, n[r].pos.y, n[s].pos.x, n[s].pos.y)/10));
+                n[s].pos.add(n[r].speed.mult(mindist / dist(n[r].pos.x, n[r].pos.y, n[s].pos.x, n[s].pos.y)/-10));
+              }
+            }
           }
         }
-      }
+
 
       let cen = createVector(windowWidth/2, windowHeight/2);
       if (p5.Vector.dist(n[r].pos, cen) > 256)
@@ -246,78 +251,11 @@ function draw() {
     textAlign(LEFT, TOP);
     text("已出院個案：　　 " + strDischarged + "宗\n死亡個案：　　　 " + strDeceased + "宗\n確診或疑似個案： " + strConfirmed　+ "宗", 10, windowHeight-statusBarHeight+35);
   }
-}
 
-var counter = [];
-var j = 1;
-var data = [];
-function graphs() {
-  for (let i = 0; i < 9; i++) {
-    data[i] = [];
-    counter[i] = 0;
-  }
-    while (j <= n[rowCount-1].journal) {
-      counter[7] = 0;
-      counter[8] = 0;
-     for (let r = 0; r < rowCount; r++) {
-          if (n[r].journal == j) {
-            counter[0]++;
-            if (n[r].classification == "Imported")
-              counter[1]++;
-            if (n[r].classification == "Close contact of imported case")
-              counter[2]++;
-            if (n[r].classification == "Local case")
-              counter[3]++;
-            if (n[r].classification == "Close contact of local case")
-              counter[4]++;
-            if (n[r].classification == "Possibly local")
-              counter[5]++;
-            if (n[r].classification == "Close contact of possibly local ")
-              counter[6]++;
-          }
-          if (n[r].endJournal <= j) {
-            if (n[r].endStatus == 1) 
-              counter[7]++;
-            if (n[r].endStatus == 2) 
-              counter[8]++;
-          }
-        }
-      for (let i = 0; i < 9; i++) 
-        data[i][j] = counter[i];
-      j++;
-    }
-    console.log(data);
-
-    var max = 1000;
-
-    for (let i = 0; i < 7; i++) {
-      var str = "";
-      for (let d = 1; d < data[0].length; d++) {
-        str = str + d + "," + (max-data[i][d]) + " ";
-      }
-      console.log(i +":"+ str + (data[0].length-1) +","+ max);
-    }
-
-    //i==7
-    var str = "";
-    for (let d = 1; d < data[7].length; d++) 
-      str = str + d + "," + (max-data[0][d]+data[7][d]) + " ";
-    for (let d = data[0].length-1; d > 0; d--)
-      str = str + d + "," + (max-data[0][d]) + " ";
-    console.log(7 +":"+ str);
-
-    //i==8
-    var str = "";
-    for (let d = 1; d < data[8].length; d++) 
-      str = str + d + "," + (max-data[0][d]+data[8][d]) + " ";
-    for (let d = data[0].length-1; d > 0; d--)
-      str = str + d + "," + (max-data[0][d]) + " ";
-    console.log(8 +":"+ str);
-
-
-
-
-
+  g++;
+  if (g == 5) 
+    g=0;
+  console.log(frameRate());
 }
 
 let deltaX, deltaY;
@@ -382,6 +320,22 @@ function windowResized() {
 
 }
 
+function grid(i) {
+    if (n[i].pos.x < windowWidth/2 && n[i].pos.y < windowWidth/2)
+      return 0;
+    else if (n[i].pos.x >= windowWidth/2 && n[i].pos.y < windowWidth/2)
+      return 1;
+    else if (n[i].pos.x < windowWidth/2 && n[i].pos.y >= windowWidth/2)
+      return 2;
+    else if (n[i].pos.x >= windowWidth/2 && n[i].pos.y >= windowWidth/2)
+      return 3;
+    else if (n[i].pos.x > windowWidth/4*1 && n[i].pos.y > windowWidth/4*1 &&
+             n[i].pos.x < windowWidth/4*3 && n[i].pos.y < windowWidth/4*3)
+      return 4;
+    else 
+      return 0;
+}
+
 class Node {
   constructor(i, j, c, ca, cl, ej, es, x, y) {
     this.id = i;
@@ -393,5 +347,6 @@ class Node {
     this.endStatus = es;
     this.pos = createVector(x, y);
     this.intensity = 0;
+    this.grid = 0;
   }
 }
