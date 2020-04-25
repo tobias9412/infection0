@@ -36,10 +36,10 @@
 18,2/9/2020,35,,party room火鍋群組,Close contact of possibly local,F,51,3/6/2020,44,Discharged
 18,2/9/2020,36,,party room火鍋群組,Close contact of possibly local,M,23,3/13/2020,51,Discharged
 19,2/10/2020,37,,party room火鍋群組,Close contact of possibly local,F,55,2/24/2020,33,Discharged
-19,2/10/2020,38,,party room火鍋群組,Close contact of local case,M,69,,,
-19,2/10/2020,39,,party room火鍋群組,Close contact of local case,F,63,2/22/2020,31,Discharged
-19,2/10/2020,40,,party room火鍋群組,Local case,F,86,3/1/2020,39,Discharged
-19,2/10/2020,41,,party room火鍋群組,Close contact of possibly local,M,52,3/6/2020,44,Discharged
+19,2/10/2020,38,,party room火鍋群組,Close contact of local case,M,52,,,
+19,2/10/2020,39,,party room火鍋群組,Close contact of local case,F,69,2/22/2020,31,Discharged
+19,2/10/2020,40,,party room火鍋群組,Local case,F,63,3/1/2020,39,Discharged
+19,2/10/2020,41,,party room火鍋群組,Close contact of possibly local,M,86,3/6/2020,44,Discharged
 19,2/10/2020,42,12,,Close contact of local case,F,62,2/28/2020,37,Discharged
 20,2/11/2020,43,,,Local case,M,59,2/27/2020,36,Discharged
 20,2/11/2020,44,30,,Close contact of possibly local,F,60,2/27/2020,36,Discharged
@@ -120,14 +120,14 @@
 48,3/10/2020,119,124,埃及旅行團群組,Imported,M,59,,,
 48,3/10/2020,120,121,埃及旅行團群組,Imported,M,59,4/12/2020,81,Discharged
 48,3/10/2020,121,120,埃及旅行團群組,Imported,F,59,4/3/2020,72,Discharged
-49,3/11/2020,122,,,Imported,F,22,,,
+49,3/11/2020,122,,,Imported,F,22,4/24/2020,93,Discharged
 49,3/11/2020,123,129,埃及旅行團群組,Imported,M,57,4/8/2020,77,Discharged
 49,3/11/2020,124,119,埃及旅行團群組,Imported,F,59,,,
 49,3/11/2020,125,,埃及旅行團群組,Imported,M,23,4/10/2020,79,Discharged
 49,3/11/2020,126,127,埃及旅行團群組,Imported,M,63,4/17/2020,86,Discharged
 49,3/11/2020,127,126,埃及旅行團群組,Imported,F,63,4/1/2020,70,Discharged
 49,3/11/2020,128,58,,Close contact of local case,F,36,3/16/2020,54,Discharged
-49,3/11/2020,129,123,埃及旅行團群組,Imported,F,52,,,
+49,3/11/2020,129,123,埃及旅行團群組,Imported,F,52,4/21/2020,90,Discharged
 49,3/11/2020,130,131/131/133,,Imported,F,31,3/31/2020,69,Discharged
 50,3/12/2020,131,131/131/133,,Imported,M,37,,,
 50,3/12/2020,132,,,Imported,M,31,4/14/2020,83,Discharged
@@ -147,11 +147,11 @@
 53,3/15/2020,146,145,,Imported,M,39,3/30/2020,68,Discharged
 53,3/15/2020,147,148,,Imported,F,61,3/30/2020,68,Discharged
 53,3/15/2020,148,147,,Imported,M,58,3/30/2020,68,Discharged
-53,3/15/2020,149,,,Possibly local,M,32,,,
+53,3/15/2020,149,,,Possibly local,M,32,4/22/2020,91,Discharged
 54,3/16/2020,150,,,Imported,M,37,4/8/2020,77,Discharged
 54,3/16/2020,151,,,Imported,M,30,4/8/2020,77,Discharged
 54,3/16/2020,152,152,,Imported,M,73,,,
-54,3/16/2020,153,143,,Imported,F,26,,,
+54,3/16/2020,153,143,,Imported,F,26,4/22/2020,91,Discharged
 54,3/16/2020,154,,,Possibly local,F,42,4/3/2020,72,Discharged
 54,3/16/2020,155,143,,Close contact of imported case,M,58,4/7/2020,76,Discharged
 54,3/16/2020,156,,,Imported,M,59,3/30/2020,68,Discharged
@@ -163,7 +163,7 @@
 55,3/17/2020,162,,,Close contact of imported case,M,36,4/5/2020,74,Discharged
 55,3/17/2020,163,,,Possibly local,F,30,3/29/2020,67,Discharged
 55,3/17/2020,164,,,Imported,M,21,4/1/2020,70,Discharged
-55,3/17/2020,165,,,Imported,M,24,,,
+55,3/17/2020,165,,,Imported,M,24,4/22/2020,91,Discharged
 55,3/17/2020,166,,,Imported,M,27,4/12/2020,81,Discharged
 55,3/17/2020,167,,,Close contact of imported case,M,25,4/16/2020,85,Discharged
 55,3/17/2020,168,,,Imported,M,43,4/5/2020,74,Discharged
@@ -181,7 +181,7 @@
 56,3/18/2020,180,,,Imported,M,38,4/8/2020,77,Discharged
 56,3/18/2020,181,,,Imported,F,63,4/7/2020,76,Discharged
 56,3/18/2020,182,,酒吧群組,Close contact of local case,F,50,4/9/2020,78,Discharged
-56,3/18/2020,183,,,Possibly local,F,24,,,
+56,3/18/2020,183,,,Possibly local,F,24,4/22/2020,91,Discharged
 56,3/18/2020,184,,,Possibly local,F,64,4/14/2020,83,Discharged
 56,3/18/2020,185,,,Imported,M,23,3/26/2020,64,Discharged
 56,3/18/2020,186,,,Possibly local,F,46,3/31/2020,69,Discharged
@@ -191,16 +191,16 @@
 56,3/18/2020,190,,,Imported,M,12,4/13/2020,82,Discharged
 56,3/18/2020,191,,,Close contact of possibly local,F,34,,,
 56,3/18/2020,192,,,Local case,F,46,,,
-56,3/18/2020,193,,,Possibly local,F,33,,,
+56,3/18/2020,193,,,Possibly local,F,33,4/22/2020,91,Discharged
 57,3/19/2020,194,,,Possibly local,M,44,4/8/2020,77,Discharged
 57,3/19/2020,195,,蘭桂坊Pure Fitness群組,Close contact of local case,M,29,4/8/2020,77,Discharged
 57,3/19/2020,196,,,Possibly local,F,48,,,
 57,3/19/2020,197,,,Imported,F,19,,,
-57,3/19/2020,198,,,Imported,M,21,,,
+57,3/19/2020,198,,,Imported,M,21,4/24/2020,93,Discharged
 57,3/19/2020,199,,蘭桂坊Pure Fitness群組,Close contact of local case,M,29,4/8/2020,77,Discharged
 57,3/19/2020,200,,,Imported,M,22,3/29/2020,67,Discharged
 57,3/19/2020,201,,,Possibly local,M,35,,,
-57,3/19/2020,202,,,Imported,F,19,,,
+57,3/19/2020,202,,,Imported,F,19,4/20/2020,89,Discharged
 57,3/19/2020,203,,,Imported,M,29,4/6/2020,75,Discharged
 57,3/19/2020,204,,,Imported,F,43,4/8/2020,77,Discharged
 57,3/19/2020,205,,,Imported,M,35,,,
@@ -210,50 +210,50 @@
 57,3/19/2020,209,,,Imported,M,51,4/13/2020,82,Discharged
 58,3/20/2020,210,,,Possibly local,M,46,4/5/2020,74,Discharged
 58,3/20/2020,211,,,Imported,F,33,4/16/2020,85,Discharged
-58,3/20/2020,212,,,Imported,F,44,,,
+58,3/20/2020,212,,,Imported,F,44,4/20/2020,89,Discharged
 58,3/20/2020,213,114,,Close contact of possibly local,F,4,4/5/2020,74,Discharged
-58,3/20/2020,214,211,,Imported,M,41,,,
+58,3/20/2020,214,211,,Imported,M,41,4/22/2020,91,Discharged
 58,3/20/2020,215,181,,Imported,M,61,4/12/2020,81,Discharged
 58,3/20/2020,216,,,Imported,M,21,4/3/2020,72,Discharged
-58,3/20/2020,217,191,,Close contact of possibly local,M,35,,,
+58,3/20/2020,217,191,,Close contact of possibly local,M,35,4/24/2020,93,Discharged
 58,3/20/2020,218,,,Imported,M,54,4/15/2020,84,Discharged
 58,3/20/2020,219,,,Imported,F,13,,,
 58,3/20/2020,220,,,Possibly local,M,57,4/4/2020,73,Discharged
-58,3/20/2020,221,,,Local case,M,62,,,
+58,3/20/2020,221,,,Local case,M,62,4/21/2020,90,Discharged
 58,3/20/2020,222,174,,Close contact of imported case,F,31,4/14/2020,83,Discharged
-58,3/20/2020,223,191/203,,Imported,F,31,,,
-58,3/20/2020,224,,,Possibly local,M,38,,,
-58,3/20/2020,225,,,Possibly local,M,61,,,
-58,3/20/2020,226,,,Imported,M,17,,,
+58,3/20/2020,223,191/203,,Imported,F,31,4/22/2020,91,Discharged
+58,3/20/2020,224,,,Possibly local,M,38,4/23/2020,92,Discharged
+58,3/20/2020,225,,,Possibly local,M,61,4/20/2020,89,Discharged
+58,3/20/2020,226,,,Imported,M,17,4/21/2020,90,Discharged
 58,3/20/2020,227,,酒吧群組,Close contact of local case,M,28,4/7/2020,76,Discharged
 58,3/20/2020,228,154,,Close contact of possibly local,M,50,,,
 58,3/20/2020,229,,,Close contact of possibly local,M,40,4/10/2020,79,Discharged
 58,3/20/2020,230,181,,Imported,F,23,4/13/2020,82,Discharged
-58,3/20/2020,231,,,Possibly local,F,24,,,
+58,3/20/2020,231,,,Possibly local,F,24,4/22/2020,91,Discharged
 58,3/20/2020,232,,,Imported,F,16,4/17/2020,86,Discharged
 58,3/20/2020,233,,愉景灣婚禮群組,Close contact of possibly local,M,31,,,
 58,3/20/2020,234,,,Possibly local,F,52,4/5/2020,74,Discharged
 58,3/20/2020,235,,,Imported,M,18,4/9/2020,78,Discharged
 58,3/20/2020,236,,,Possibly local,M,32,4/13/2020,82,Discharged
 58,3/20/2020,237,,愉景灣婚禮群組,Close contact of possibly local,F,29,4/12/2020,81,Discharged
-58,3/20/2020,238,,玻利維亞旅行團群組,Imported,F,69,,,
+58,3/20/2020,238,,玻利維亞旅行團群組,Imported,F,69,4/23/2020,92,Discharged
 58,3/20/2020,239,,,Possibly local,M,50,4/16/2020,85,Discharged
 58,3/20/2020,240,,,Imported,F,33,4/1/2020,70,Discharged
 58,3/20/2020,241,,,Imported,M,60,4/10/2020,79,Discharged
 58,3/20/2020,242,,玻利維亞旅行團群組,Imported,F,61,4/6/2020,75,Discharged
 58,3/20/2020,243,,,Close contact of imported case,F,25,4/17/2020,86,Discharged
-58,3/20/2020,244,,,Possibly local,F,36,,,
+58,3/20/2020,244,,,Possibly local,F,36,4/24/2020,93,Discharged
 58,3/20/2020,245,,空手道運動員群組,Imported,M,46,4/5/2020,74,Discharged
 58,3/20/2020,246,,,Imported,M,58,3/30/2020,68,Discharged
-58,3/20/2020,247,,,Imported,F,34,,,
+58,3/20/2020,247,,,Imported,F,34,4/22/2020,91,Discharged
 58,3/20/2020,248,,,Local case,M,33,3/28/2020,66,Discharged
 58,3/20/2020,249,,,Imported,M,19,4/16/2020,85,Discharged
 58,3/20/2020,250,191/217,,Close contact of possibly local,F,27,4/16/2020,85,Discharged
 58,3/20/2020,251,,,Possibly local,M,38,4/14/2020,83,Discharged
 58,3/20/2020,252,,,Imported,M,23,4/15/2020,84,Discharged
 58,3/20/2020,253,,,Close contact of possibly local,F,31,4/5/2020,74,Discharged
-58,3/20/2020,254,,空手道運動員群組,Imported,F,27,,,
-58,3/20/2020,255,,,Imported,F,22,,,
+58,3/20/2020,254,,空手道運動員群組,Imported,F,27,4/22/2020,91,Discharged
+58,3/20/2020,255,,,Imported,F,22,4/23/2020,92,Discharged
 58,3/20/2020,256,205,,Imported,F,30,4/14/2020,83,Discharged
 58,3/20/2020,257,,,Imported,M,18,4/17/2020,86,Discharged
 59,3/21/2020,258,259,,Close contact of possibly local,F,58,,,
@@ -268,18 +268,18 @@
 59,3/21/2020,267,,,Imported,F,30,4/1/2020,70,Discharged
 59,3/21/2020,268,,玻利維亞旅行團群組,Imported,F,60,4/7/2020,76,Discharged
 59,3/21/2020,269,,,Imported,F,15,4/13/2020,82,Discharged
-59,3/21/2020,270,,,Possibly local,F,35,,,
+59,3/21/2020,270,,,Possibly local,F,35,4/21/2020,90,Discharged
 59,3/21/2020,271,,,Possibly local,F,51,4/16/2020,85,Discharged
 59,3/21/2020,272,,,Possibly local,M,11,,,
 59,3/21/2020,273,,,Possibly local,M,36,4/5/2020,74,Discharged
 59,3/21/2020,274,,,Imported,F,36,4/3/2020,72,Discharged
 60,3/22/2020,275,,酒吧群組,Local case,M,30,,,
-60,3/22/2020,276,343,酒吧群組,Close contact of local case,M,29,,,
+60,3/22/2020,276,343,酒吧群組,Close contact of local case,M,29,4/23/2020,92,Discharged
 60,3/22/2020,277,,黃竹坑派對群組,Close contact of possibly local,F,27,4/3/2020,72,Discharged
 60,3/22/2020,278,,酒吧群組,Local case,M,28,,,
-60,3/22/2020,279,,,Imported,M,30,,,
+60,3/22/2020,279,,,Imported,M,30,4/24/2020,93,Discharged
 60,3/22/2020,280,,,Imported,M,20,4/16/2020,85,Discharged
-60,3/22/2020,281,,,Imported,M,33,,,
+60,3/22/2020,281,,,Imported,M,33,4/22/2020,91,Discharged
 60,3/22/2020,282,,,Possibly local,F,39,4/1/2020,70,Discharged
 60,3/22/2020,283,,,Imported,F,20,4/5/2020,74,Discharged
 60,3/22/2020,284,,酒吧群組,Local case,F,26,,,
@@ -289,9 +289,9 @@
 60,3/22/2020,288,,,Imported,M,20,4/14/2020,83,Discharged
 60,3/22/2020,289,,,Imported,F,20,3/26/2020,64,Discharged
 60,3/22/2020,290,,,Imported,F,18,,,
-60,3/22/2020,291,,長沙灣工廈群組,Close contact of local case,M,32,,,
+60,3/22/2020,291,,長沙灣工廈群組,Close contact of local case,M,32,4/20/2020,89,Discharged
 60,3/22/2020,292,,,Imported,M,17,4/8/2020,77,Discharged
-60,3/22/2020,293,,,Possibly local,M,36,,,
+60,3/22/2020,293,,,Possibly local,M,36,4/22/2020,91,Discharged
 60,3/22/2020,294,165,,Imported,M,30,,,
 60,3/22/2020,295,,愉景灣婚禮群組,Close contact of possibly local,M,31,,,
 60,3/22/2020,296,,,Imported,M,24,4/8/2020,77,Discharged
@@ -299,7 +299,7 @@
 60,3/22/2020,298,143,,Close contact of imported case,F,1,4/10/2020,79,Discharged
 60,3/22/2020,299,,,Possibly local,M,40,4/10/2020,79,Discharged
 60,3/22/2020,300,,,Imported,M,36,4/17/2020,86,Discharged
-60,3/22/2020,301,,玻利維亞旅行團群組,Imported,F,72,,,
+60,3/22/2020,301,,玻利維亞旅行團群組,Imported,F,72,4/22/2020,91,Discharged
 60,3/22/2020,302,,空手道運動員群組,Imported,M,19,,,
 60,3/22/2020,303,237,,Close contact of possibly local,F,1,4/12/2020,81,Discharged
 60,3/22/2020,304,,愉景灣婚禮群組,Close contact of possibly local,M,69,4/16/2020,85,Discharged
@@ -311,16 +311,16 @@
 60,3/22/2020,310,,,Possibly local,F,33,4/8/2020,77,Discharged
 60,3/22/2020,311,154/228,,Close contact of possibly local,F,16,4/1/2020,70,Discharged
 60,3/22/2020,312,,長沙灣工廈群組,Local case,F,56,,,
-60,3/22/2020,313,,,Imported,F,29,,,
-60,3/22/2020,314,221,,Close contact of local case,M,28,,,
-60,3/22/2020,315,169,,Close contact of possibly local,M,45,,,
+60,3/22/2020,313,,,Imported,F,29,4/23/2020,92,Discharged
+60,3/22/2020,314,221,,Close contact of local case,M,28,4/20/2020,89,Discharged
+60,3/22/2020,315,169,,Close contact of possibly local,M,45,4/23/2020,92,Discharged
 60,3/22/2020,316,,,Possibly local,M,29,4/8/2020,77,Discharged
 60,3/22/2020,317,,,Imported,M,24,4/8/2020,77,Discharged
 60,3/22/2020,318,,,Possibly local,M,41,4/6/2020,75,Discharged
 61,3/23/2020,319,266/342,,Close contact of local case,F,25,4/15/2020,84,Discharged
-61,3/23/2020,320,198,,Imported,F,20,,,
-61,3/23/2020,321,241,,Imported,F,57,,,
-61,3/23/2020,322,195,,Close contact of local case,F,61,,,
+61,3/23/2020,320,198,,Imported,F,20,4/22/2020,91,Discharged
+61,3/23/2020,321,241,,Imported,F,57,4/22/2020,91,Discharged
+61,3/23/2020,322,195,,Close contact of local case,F,61,4/24/2020,93,Discharged
 61,3/23/2020,323,,,Imported,F,20,4/3/2020,72,Discharged
 61,3/23/2020,324,300,,Imported,M,36,4/13/2020,82,Discharged
 61,3/23/2020,325,,,Possibly local,M,34,4/12/2020,81,Discharged
@@ -331,9 +331,9 @@
 61,3/23/2020,330,,,Imported,M,30,4/4/2020,73,Discharged
 61,3/23/2020,331,,,Imported,F,21,,,
 61,3/23/2020,332,191/217/250,,Possibly local,M,32,4/15/2020,84,Discharged
-61,3/23/2020,333,,,Imported,M,56,,,
-61,3/23/2020,334,,,Imported,M,18,,,
-61,3/23/2020,335,,,Imported,F,19,,,
+61,3/23/2020,333,,,Imported,M,56,4/22/2020,91,Discharged
+61,3/23/2020,334,,,Imported,M,18,4/22/2020,91,Discharged
+61,3/23/2020,335,,,Imported,F,19,4/22/2020,91,Discharged
 61,3/23/2020,336,336/400/401,,Imported,F,43,4/17/2020,86,Discharged
 61,3/23/2020,337,229/338,,Close contact of possibly local,M,66,4/17/2020,86,Discharged
 61,3/23/2020,338,229/337,,Possibly local,M,62,,,
@@ -346,7 +346,7 @@
 61,3/23/2020,345,,,Possibly local,F,37,4/2/2020,71,Discharged
 61,3/23/2020,346,,,Imported,M,30,4/6/2020,75,Discharged
 61,3/23/2020,347,,,Local case,F,54,,,
-61,3/23/2020,348,,,Possibly local,F,66,,,
+61,3/23/2020,348,,,Possibly local,F,66,4/22/2020,91,Discharged
 61,3/23/2020,349,243,,Close contact of imported case,M,26,4/8/2020,77,Discharged
 61,3/23/2020,350,351,,Imported,F,57,4/8/2020,77,Discharged
 61,3/23/2020,351,350,,Imported,M,58,4/13/2020,82,Discharged
@@ -364,11 +364,11 @@
 62,3/24/2020,363,,酒吧群組,Possibly local,M,52,4/9/2020,78,Discharged
 62,3/24/2020,364,,,Imported,M,21,4/7/2020,76,Discharged
 62,3/24/2020,365,,,Imported,M,44,4/2/2020,71,Discharged
-62,3/24/2020,366,,,Possibly local,M,42,,,
+62,3/24/2020,366,,,Possibly local,M,42,4/22/2020,91,Discharged
 62,3/24/2020,367,,酒吧群組,Close contact of local case,M,38,4/16/2020,85,Discharged
 62,3/24/2020,368,,,Imported,F,32,4/7/2020,76,Discharged
 62,3/24/2020,369,,,Imported,M,36,4/9/2020,78,Discharged
-62,3/24/2020,370,,,Imported,F,26,,,
+62,3/24/2020,370,,,Imported,F,26,4/22/2020,91,Discharged
 62,3/24/2020,371,,,Possibly local,M,66,4/15/2020,84,Discharged
 62,3/24/2020,372,,長沙灣工廈群組,Close contact of local case,M,54,4/10/2020,79,Discharged
 62,3/24/2020,373,,愉景灣婚禮群組,Close contact of possibly local,M,33,4/4/2020,73,Discharged
@@ -384,27 +384,27 @@
 62,3/24/2020,383,,,Imported,F,39,,,
 62,3/24/2020,384,,酒吧群組,Close contact of local case,F,26,4/12/2020,81,Discharged
 62,3/24/2020,385,,,Possibly local,M,50,4/16/2020,85,Discharged
-62,3/24/2020,386,,酒吧群組,Close contact of local case,M,48,,,
+62,3/24/2020,386,,酒吧群組,Close contact of local case,M,48,4/20/2020,89,Discharged
 62,3/24/2020,387,,酒吧群組,Close contact of local case,M,38,4/15/2020,84,Discharged
 63,3/25/2020,388,,,Local case,M,36,,,
 63,3/25/2020,389,,酒吧群組,Close contact of local case,M,43,4/17/2020,86,Discharged
 63,3/25/2020,390,,,Possibly local,F,30,4/13/2020,82,Discharged
 63,3/25/2020,391,,長沙灣工廈群組,Close contact of local case,F,57,,,
 63,3/25/2020,392,,,Possibly local,F,33,4/9/2020,78,Discharged
-63,3/25/2020,393,,,Imported,F,18,,,
+63,3/25/2020,393,,,Imported,F,18,4/24/2020,93,Discharged
 63,3/25/2020,394,,酒吧群組,Local case,M,28,4/12/2020,81,Discharged
 63,3/25/2020,395,,酒吧群組,Close contact of local case,F,29,,,
 63,3/25/2020,396,354,,Imported,M,28,4/6/2020,75,Discharged
 63,3/25/2020,397,,,Imported,F,48,,,
-63,3/25/2020,398,,,Imported,M,16,,,
+63,3/25/2020,398,,,Imported,M,16,4/21/2020,90,Discharged
 63,3/25/2020,399,,,Imported,F,21,,,
 63,3/25/2020,400,336/400/401,,Imported,M,11,4/5/2020,74,Discharged
 63,3/25/2020,401,336/400/401,,Imported,F,51,4/4/2020,73,Discharged
-63,3/25/2020,402,,,Imported,M,26,,,
+63,3/25/2020,402,,,Imported,M,26,4/22/2020,91,Discharged
 63,3/25/2020,403,404,,Imported,M,45,4/16/2020,85,Discharged
 63,3/25/2020,404,403,,Imported,F,50,4/8/2020,77,Discharged
 63,3/25/2020,405,,,Possibly local,M,41,4/13/2020,82,Discharged
-63,3/25/2020,406,,,Possibly local,M,50,,,
+63,3/25/2020,406,,,Possibly local,M,50,4/21/2020,90,Discharged
 63,3/25/2020,407,198,,Imported,F,20,4/9/2020,78,Discharged
 63,3/25/2020,408,,,Imported,F,18,4/17/2020,86,Discharged
 63,3/25/2020,409,,,Imported,M,20,4/7/2020,76,Discharged
@@ -413,20 +413,20 @@
 64,3/26/2020,412,,,Possibly local,F,32,4/16/2020,85,Discharged
 64,3/26/2020,413,,酒吧群組,Close contact of local case,F,48,,,
 64,3/26/2020,414,,,Local case,M,46,,,
-64,3/26/2020,415,,,Possibly local,F,47,,,
+64,3/26/2020,415,,,Possibly local,F,47,4/22/2020,91,Discharged
 64,3/26/2020,416,,,Imported,M,20,4/4/2020,73,Discharged
 64,3/26/2020,417,,,Imported,M,65,,,
 64,3/26/2020,418,,,Imported,F,20,4/2/2020,71,Discharged
 64,3/26/2020,419,,,Imported,F,20,4/4/2020,73,Discharged
 64,3/26/2020,420,,,Imported,F,27,4/3/2020,72,Discharged
-64,3/26/2020,421,,,Imported,M,25,,,
-64,3/26/2020,422,,酒吧群組,Close contact of local case,M,31,,,
-64,3/26/2020,423,,,Possibly local,M,36,,,
+64,3/26/2020,421,,,Imported,M,25,4/20/2020,89,Discharged
+64,3/26/2020,422,,酒吧群組,Close contact of local case,M,31,4/22/2020,91,Discharged
+64,3/26/2020,423,,,Possibly local,M,36,4/20/2020,89,Discharged
 64,3/26/2020,424,,,Imported,M,18,,,
 64,3/26/2020,425,,,Imported,M,18,,,
 64,3/26/2020,426,,,Imported,F,19,4/13/2020,82,Discharged
 64,3/26/2020,427,,,Imported,F,74,,,
-64,3/26/2020,428,,警員,Close contact of local case,F,22,,,
+64,3/26/2020,428,,警員,Close contact of local case,F,22,4/21/2020,90,Discharged
 64,3/26/2020,429,,長沙灣工廈群組,Close contact of local case,F,48,,,
 64,3/26/2020,430,,,Imported,F,19,4/16/2020,85,Discharged
 64,3/26/2020,431,,,Imported,M,20,4/3/2020,72,Discharged
@@ -434,7 +434,7 @@
 64,3/26/2020,433,,酒吧群組,Close contact of local case,M,47,4/15/2020,84,Discharged
 64,3/26/2020,434,,酒吧群組,Close contact of local case,F,30,4/5/2020,74,Discharged
 64,3/26/2020,435,,,Imported,F,44,4/15/2020,84,Discharged
-64,3/26/2020,436,,,Imported,F,23,,,
+64,3/26/2020,436,,,Imported,F,23,4/22/2020,91,Discharged
 64,3/26/2020,437,275/278/284,,Close contact of local case,F,27,4/6/2020,75,Discharged
 64,3/26/2020,438,,,Possibly local,F,42,4/9/2020,78,Discharged
 64,3/26/2020,439,,,Imported,F,19,4/9/2020,78,Discharged
@@ -456,7 +456,7 @@
 65,3/27/2020,455,,,Imported,M,33,,,
 65,3/27/2020,456,,,Imported,M,62,4/16/2020,85,Discharged
 65,3/27/2020,457,,,Imported,M,45,4/16/2020,85,Discharged
-65,3/27/2020,458,,酒吧群組,Close contact of local case,F,25,,,
+65,3/27/2020,458,,酒吧群組,Close contact of local case,F,25,4/22/2020,91,Discharged
 65,3/27/2020,459,,,Imported,M,23,4/7/2020,76,Discharged
 65,3/27/2020,460,374,,Imported,F,56,4/5/2020,74,Discharged
 65,3/27/2020,461,,,Imported,M,60,,,
@@ -465,7 +465,7 @@
 65,3/27/2020,464,,,Imported,M,61,4/15/2020,84,Discharged
 65,3/27/2020,465,,,Imported,F,56,4/15/2020,84,Discharged
 65,3/27/2020,466,,酒吧群組,Close contact of local case,M,36,,,
-65,3/27/2020,467,467/612/613/622/742,,Possibly local,M,48,,,
+65,3/27/2020,467,467/612/613/622/742,,Possibly local,M,48,4/21/2020,90,Discharged
 65,3/27/2020,468,,,Imported,F,15,,,
 65,3/27/2020,469,,,Imported,M,24,4/3/2020,72,Discharged
 65,3/27/2020,470,,,Imported,F,18,,,
@@ -475,7 +475,7 @@
 65,3/27/2020,474,,,Imported,F,26,4/17/2020,86,Discharged
 65,3/27/2020,475,,愉景灣婚禮群組,Close contact of imported case,F,33,4/9/2020,78,Discharged
 65,3/27/2020,476,,,Possibly local,M,47,,,
-65,3/27/2020,477,,酒吧群組,Close contact of local case,F,52,,,
+65,3/27/2020,477,,酒吧群組,Close contact of local case,F,52,4/22/2020,91,Discharged
 65,3/27/2020,478,,,Imported,F,22,4/15/2020,84,Discharged
 65,3/27/2020,479,188/189,,Imported,M,71,,,
 65,3/27/2020,480,,,Imported,F,52,4/6/2020,75,Discharged
@@ -490,16 +490,16 @@
 65,3/27/2020,489,489/488,,Imported,F,23,4/15/2020,84,Discharged
 65,3/27/2020,490,,,Imported,M,27,,,
 65,3/27/2020,491,,,Imported,F,15,4/17/2020,86,Discharged
-65,3/27/2020,492,,,Possibly local,F,50,,,
-65,3/27/2020,493,,,Possibly local,F,50,,,
+65,3/27/2020,492,,,Possibly local,F,50,4/20/2020,89,Discharged
+65,3/27/2020,493,,,Possibly local,F,50,4/22/2020,91,Discharged
 65,3/27/2020,494,,,Imported,M,18,4/16/2020,85,Discharged
 65,3/27/2020,495,,,Possibly local,F,31,4/17/2020,86,Discharged
 65,3/27/2020,496,,,Imported,M,17,4/8/2020,77,Discharged
 65,3/27/2020,497,,酒吧群組,Close contact of local case,F,27,,,
 65,3/27/2020,498,,酒吧群組,Close contact of local case,F,58,,,
-65,3/27/2020,499,,酒吧群組,Close contact of local case,M,48,,,
+65,3/27/2020,499,,酒吧群組,Close contact of local case,M,48,4/22/2020,91,Discharged
 65,3/27/2020,500,,,Imported,F,18,4/4/2020,73,Discharged
-65,3/27/2020,501,,酒吧群組,Close contact of local case,M,35,,,
+65,3/27/2020,501,,酒吧群組,Close contact of local case,M,35,4/20/2020,89,Discharged
 65,3/27/2020,502,,,Imported,M,42,4/4/2020,73,Discharged
 65,3/27/2020,503,,,Imported,M,12,4/13/2020,82,Discharged
 65,3/27/2020,504,,酒吧群組,Close contact of local case,F,62,,,
@@ -508,25 +508,25 @@
 65,3/27/2020,507,,,Possibly local,F,49,4/16/2020,85,Discharged
 65,3/27/2020,508,,,Imported,F,48,4/9/2020,78,Discharged
 65,3/27/2020,509,,酒吧群組,Close contact of local case,F,40,,,
-65,3/27/2020,510,,酒吧群組,Close contact of local case,F,62,,,
-65,3/27/2020,511,,酒吧群組,Close contact of local case,F,37,,,
+65,3/27/2020,510,,酒吧群組,Close contact of local case,F,62,4/24/2020,93,Discharged
+65,3/27/2020,511,,酒吧群組,Close contact of local case,F,37,4/22/2020,91,Discharged
 65,3/27/2020,512,,酒吧群組,Close contact of local case,F,23,,,
 65,3/27/2020,513,,酒吧群組,Close contact of local case,M,36,4/15/2020,84,Discharged
 65,3/27/2020,514,,酒吧群組,Close contact of local case,M,45,,,
 65,3/27/2020,515,,酒吧群組,Close contact of local case,M,30,,,
-65,3/27/2020,516,,酒吧群組,Local case,F,38,,,
+65,3/27/2020,516,,酒吧群組,Local case,F,38,4/20/2020,89,Discharged
 65,3/27/2020,517,,酒吧群組,Close contact of local case,F,30,,,
 65,3/27/2020,518,,,Imported,M,20,,,
 65,3/27/2020,519,,酒吧群組,Close contact of local case,M,37,4/9/2020,78,Discharged
-66,3/28/2020,520,,,Imported,F,35,,,
+66,3/28/2020,520,,,Imported,F,35,4/23/2020,92,Discharged
 66,3/28/2020,521,,,Imported,F,56,,,
 66,3/28/2020,522,,,Imported,F,38,,,
 66,3/28/2020,523,,,Imported,M,38,4/17/2020,86,Discharged
-66,3/28/2020,524,,酒吧群組,Close contact of local case,M,56,,,
+66,3/28/2020,524,,酒吧群組,Close contact of local case,M,56,4/22/2020,91,Discharged
 66,3/28/2020,525,,酒吧群組,Close contact of local case,M,63,,,
 66,3/28/2020,526,,酒吧群組,Close contact of local case,F,52,,,
-66,3/28/2020,527,,,Imported,M,48,,,
-66,3/28/2020,528,,,Possibly local,F,29,,,
+66,3/28/2020,527,,,Imported,M,48,4/22/2020,91,Discharged
+66,3/28/2020,528,,,Possibly local,F,29,4/23/2020,92,Discharged
 66,3/28/2020,529,,,Imported,M,41,4/17/2020,86,Discharged
 66,3/28/2020,530,,,Imported,M,60,4/16/2020,85,Discharged
 66,3/28/2020,531,,酒吧群組,Close contact of local case,F,42,,,
@@ -535,12 +535,12 @@
 66,3/28/2020,534,,,Possibly local,M,24,4/3/2020,72,Discharged
 66,3/28/2020,535,,,Possibly local,F,28,4/9/2020,78,Discharged
 66,3/28/2020,536,,,Possibly local,F,31,,,
-66,3/28/2020,537,,,Imported,F,20,,,
+66,3/28/2020,537,,,Imported,F,20,4/23/2020,92,Discharged
 66,3/28/2020,538,,,Imported,M,39,,,
-66,3/28/2020,539,,,Imported,M,19,,,
+66,3/28/2020,539,,,Imported,M,19,4/20/2020,89,Discharged
 66,3/28/2020,540,,,Imported,M,18,4/17/2020,86,Discharged
 66,3/28/2020,541,,,Imported,F,17,,,
-66,3/28/2020,542,,,Imported,M,18,,,
+66,3/28/2020,542,,,Imported,M,18,4/23/2020,92,Discharged
 66,3/28/2020,543,,,Imported,M,25,4/4/2020,73,Discharged
 66,3/28/2020,544,,,Imported,M,20,,,
 66,3/28/2020,545,,,Imported,M,19,,,
@@ -548,10 +548,10 @@
 66,3/28/2020,547,,,Imported,M,18,4/7/2020,76,Discharged
 66,3/28/2020,548,,,Imported,M,16,4/16/2020,85,Discharged
 66,3/28/2020,549,,,Imported,M,16,,,
-66,3/28/2020,550,,,Imported,F,18,,,
+66,3/28/2020,550,,,Imported,F,18,4/20/2020,89,Discharged
 66,3/28/2020,551,,,Imported,M,20,,,
 66,3/28/2020,552,,,Imported,F,20,4/12/2020,81,Discharged
-66,3/28/2020,553,,,Imported,M,20,,,
+66,3/28/2020,553,,,Imported,M,20,4/23/2020,92,Discharged
 66,3/28/2020,554,,,Imported,F,21,4/5/2020,74,Discharged
 66,3/28/2020,555,,,Imported,M,23,4/5/2020,74,Discharged
 66,3/28/2020,556,,,Imported,F,22,4/3/2020,72,Discharged
@@ -560,31 +560,31 @@
 66,3/28/2020,559,,,Imported,F,19,4/10/2020,79,Discharged
 66,3/28/2020,560,,,Imported,M,20,,,
 66,3/28/2020,561,152,,Imported,F,67,,,
-66,3/28/2020,562,,,Local case,M,25,,,
+66,3/28/2020,562,,,Local case,M,25,4/22/2020,91,Discharged
 66,3/28/2020,563,,,Local case,M,27,,,
 66,3/28/2020,564,,,Local case,M,33,4/16/2020,85,Discharged
-66,3/28/2020,565,,,Imported,M,66,,,
+66,3/28/2020,565,,,Imported,M,66,4/22/2020,91,Discharged
 66,3/28/2020,566,,,Local case,M,31,4/17/2020,86,Discharged
 66,3/28/2020,567,,,Local case,M,21,,,
 66,3/28/2020,568,,,Imported,M,26,,,
-66,3/28/2020,569,,,Imported,F,61,,,
+66,3/28/2020,569,,,Imported,F,61,4/22/2020,91,Discharged
 66,3/28/2020,570,,,Imported,M,15,4/14/2020,83,Discharged
 66,3/28/2020,571,,,Imported,F,76,4/12/2020,81,Discharged
 66,3/28/2020,572,,,Imported,M,56,,,
-66,3/28/2020,573,,酒吧群組,Close contact of local case,M,65,,,
+66,3/28/2020,573,,酒吧群組,Close contact of local case,M,65,4/22/2020,91,Discharged
 66,3/28/2020,574,,,Imported,M,56,,,
 66,3/28/2020,575,,酒吧群組,Close contact of local case,M,31,4/8/2020,77,Discharged
-66,3/28/2020,576,,酒吧群組,Close contact of local case,M,36,,,
+66,3/28/2020,576,,酒吧群組,Close contact of local case,M,36,4/20/2020,89,Discharged
 66,3/28/2020,577,,酒吧群組,Close contact of local case,M,15,,,
 66,3/28/2020,578,,酒吧群組,Local case?????,M,7,,,
 66,3/28/2020,579,,酒吧群組,Close contact of local case,F,34,4/15/2020,84,Discharged
 66,3/28/2020,580,,,Imported,F,26,,,
-66,3/28/2020,581,,酒吧群組,Close contact of local case,M,42,,,
+66,3/28/2020,581,,酒吧群組,Close contact of local case,M,42,4/22/2020,91,Discharged
 66,3/28/2020,582,,,Imported,F,31,4/13/2020,82,Discharged
-66,3/28/2020,583,,,Imported,M,19,,,
+66,3/28/2020,583,,,Imported,M,19,4/21/2020,90,Discharged
 67,3/29/2020,584,,,Possibly local,M,63,,,
 67,3/29/2020,585,,,Local case,F,28,4/2/2020,71,Discharged
-67,3/29/2020,586,,,Local case,M,38,,,
+67,3/29/2020,586,,,Local case,M,38,4/24/2020,93,Discharged
 67,3/29/2020,587,,,Imported,F,29,4/14/2020,83,Discharged
 67,3/29/2020,588,,,Imported,M,29,4/14/2020,83,Discharged
 67,3/29/2020,589,,,Imported,F,21,,,
@@ -609,38 +609,38 @@
 67,3/29/2020,608,,,Possibly local,F,27,4/4/2020,73,Discharged
 67,3/29/2020,609,415,,Close contact of possibly local,F,21,4/8/2020,77,Discharged
 67,3/29/2020,610,,,Local case,F,35,4/8/2020,77,Discharged
-67,3/29/2020,611,,,Local case,F,56,,,
-67,3/29/2020,612,467/612/613/622/742,,Close contact of imported case,F,11,,,
-67,3/29/2020,613,467/612/613/622/742,,Imported,M,14,,,
+67,3/29/2020,611,,,Local case,F,56,4/23/2020,92,Discharged
+67,3/29/2020,612,467/612/613/622/742,,Close contact of imported case,F,11,4/21/2020,90,Discharged
+67,3/29/2020,613,467/612/613/622/742,,Imported,M,14,4/22/2020,91,Discharged
 67,3/29/2020,614,,酒吧群組,Close contact of local case,M,31,4/14/2020,83,Discharged
 67,3/29/2020,615,,酒吧群組,Close contact of local case,F,28,4/12/2020,81,Discharged
 67,3/29/2020,616,,,Imported,M,20,4/6/2020,75,Discharged
 67,3/29/2020,617,,,Imported,F,31,4/5/2020,74,Discharged
 67,3/29/2020,618,566,,Local case,M,29,4/12/2020,81,Discharged
-67,3/29/2020,619,,,Imported,F,58,,,
+67,3/29/2020,619,,,Imported,F,58,4/22/2020,91,Discharged
 67,3/29/2020,620,,,Imported,M,58,,,
 67,3/29/2020,621,,,Possibly local,M,59,4/14/2020,83,Discharged
-67,3/29/2020,622,467/612/613/622/742,,Close contact of imported case,F,47,,,
+67,3/29/2020,622,467/612/613/622/742,,Close contact of imported case,F,47,4/22/2020,91,Discharged
 67,3/29/2020,623,,,Possibly local,F,38,,,
 67,3/29/2020,624,,,Imported,M,47,4/5/2020,74,Discharged
-67,3/29/2020,625,,酒吧群組,Close contact of local case,M,51,,,
+67,3/29/2020,625,,酒吧群組,Close contact of local case,M,51,4/22/2020,91,Discharged
 67,3/29/2020,626,,酒吧群組,Close contact of local case,M,37,,,
 67,3/29/2020,627,,酒吧群組,Close contact of local case,F,67,4/14/2020,83,Discharged
-67,3/29/2020,628,,,Imported,F,21,,,
+67,3/29/2020,628,,,Imported,F,21,4/20/2020,89,Discharged
 67,3/29/2020,629,,,Imported,M,36,4/14/2020,83,Discharged
 67,3/29/2020,630,,酒吧群組,Close contact of local case,M,32,,,
 67,3/29/2020,631,354/396/464,,Imported,F,49,4/7/2020,76,Discharged
 67,3/29/2020,632,,酒吧群組,Close contact of local case,M,77,,,
 67,3/29/2020,633,,,Possibly local,F,74,4/13/2020,82,Discharged
-67,3/29/2020,634,333,,Imported,F,48,,,
-67,3/29/2020,635,,酒吧群組,Close contact of local case,F,40,,,
+67,3/29/2020,634,333,,Imported,F,48,4/21/2020,90,Discharged
+67,3/29/2020,635,,酒吧群組,Close contact of local case,F,40,4/22/2020,91,Discharged
 67,3/29/2020,636,,,Imported,F,21,,,
-67,3/29/2020,637,,酒吧群組,Local case,M,28,,,
+67,3/29/2020,637,,酒吧群組,Local case,M,28,4/24/2020,93,Discharged
 67,3/29/2020,638,,酒吧群組,Close contact of local case,M,39,4/7/2020,76,Discharged
 67,3/29/2020,639,678/811,,Imported,F,21,,,
 67,3/29/2020,640,,,Imported,F,23,4/15/2020,84,Discharged
 67,3/29/2020,641,,,Imported,M,34,,,
-67,3/29/2020,642,,,Imported,F,23,,,
+67,3/29/2020,642,,,Imported,F,23,4/23/2020,92,Discharged
 68,3/30/2020,643,,,Local case,M,32,4/16/2020,85,Discharged
 68,3/30/2020,644,465,,Imported,M,13,4/17/2020,86,Discharged
 68,3/30/2020,645,,,Imported,F,27,,,
@@ -648,14 +648,14 @@
 68,3/30/2020,647,,,Imported,F,36,4/14/2020,83,Discharged
 68,3/30/2020,648,,,Imported,M,19,4/9/2020,78,Discharged
 68,3/30/2020,649,,,Imported,M,18,4/17/2020,86,Discharged
-68,3/30/2020,650,555,,Imported,F,24,,,
+68,3/30/2020,650,555,,Imported,F,24,4/23/2020,92,Discharged
 68,3/30/2020,651,,,Imported,F,21,4/14/2020,83,Discharged
-68,3/30/2020,652,,,Imported,F,30,,,
+68,3/30/2020,652,,,Imported,F,30,4/23/2020,92,Discharged
 68,3/30/2020,653,,,Imported,M,52,4/17/2020,86,Discharged
 68,3/30/2020,654,,,Imported,F,30,4/7/2020,76,Discharged
 68,3/30/2020,655,,,Imported,M,19,4/14/2020,83,Discharged
 68,3/30/2020,656,,,Imported,M,58,,,
-68,3/30/2020,657,,,Imported,M,25,,,
+68,3/30/2020,657,,,Imported,M,25,4/22/2020,91,Discharged
 68,3/30/2020,658,,,Imported,F,18,,,
 68,3/30/2020,659,652,,Imported,M,32,,,
 68,3/30/2020,660,,,Imported,F,20,4/6/2020,75,Discharged
@@ -670,32 +670,32 @@
 68,3/30/2020,669,,,Imported,F,32,,,
 68,3/30/2020,670,,酒吧群組,Close contact of local case,F,32,4/5/2020,74,Discharged
 68,3/30/2020,671,,,Imported,M,19,4/15/2020,84,Discharged
-68,3/30/2020,672,,,Imported,M,16,,,
+68,3/30/2020,672,,,Imported,M,16,4/22/2020,91,Discharged
 68,3/30/2020,673,,,Imported,M,52,4/17/2020,86,Discharged
 68,3/30/2020,674,,,Local case,M,23,,,
-68,3/30/2020,675,,,Imported,F,19,,,
-68,3/30/2020,676,,,Imported,M,20,,,
-68,3/30/2020,677,,酒吧群組,Close contact of local case,F,59,,,
-68,3/30/2020,678,639/811,,Imported,F,21,,,
-68,3/30/2020,679,,,Imported,M,19,,,
+68,3/30/2020,675,,,Imported,F,19,4/22/2020,91,Discharged
+68,3/30/2020,676,,,Imported,M,20,4/21/2020,90,Discharged
+68,3/30/2020,677,,酒吧群組,Close contact of local case,F,59,4/24/2020,93,Discharged
+68,3/30/2020,678,639/811,,Imported,F,21,4/22/2020,91,Discharged
+68,3/30/2020,679,,,Imported,M,19,4/24/2020,93,Discharged
 68,3/30/2020,680,,,Imported,F,19,4/15/2020,84,Discharged
 68,3/30/2020,681,,,Imported,M,17,,,
 68,3/30/2020,682,,,Possibly local,M,38,4/7/2020,76,Discharged
-68,3/30/2020,683,563,,Close contact of local case,F,34,,,
+68,3/30/2020,683,563,,Close contact of local case,F,34,4/20/2020,89,Discharged
 69,3/31/2020,684,,,Imported,M,21,,,
-69,3/31/2020,685,,,Imported,M,60,,,
+69,3/31/2020,685,,,Imported,M,60,4/24/2020,93,Discharged
 69,3/31/2020,686,,,Possibly local,M,30,4/9/2020,78,Discharged
 69,3/31/2020,687,662,Red MR群組,Close contact of local case,F,29,,,
 69,3/31/2020,688,,,Imported,M,18,4/17/2020,86,Discharged
 69,3/31/2020,689,,,Imported,F,36,,,
-69,3/31/2020,690,,,Imported,M,17,,,
+69,3/31/2020,690,,,Imported,M,17,4/22/2020,91,Discharged
 69,3/31/2020,691,581/632,,Close contact of local case,F,72,,,
 69,3/31/2020,692,187,,Imported,M,20,4/15/2020,84,Discharged
 69,3/31/2020,693,,,Imported,M,21,4/12/2020,81,Discharged
-69,3/31/2020,694,,,Imported,F,71,,,
-69,3/31/2020,695,,,Imported,M,18,,,
+69,3/31/2020,694,,,Imported,F,71,4/22/2020,91,Discharged
+69,3/31/2020,695,,,Imported,M,18,4/20/2020,89,Discharged
 69,3/31/2020,696,,,Imported,M,15,4/14/2020,83,Discharged
-69,3/31/2020,697,697,,Imported,F,21,,,
+69,3/31/2020,697,697,,Imported,F,21,4/23/2020,92,Discharged
 69,3/31/2020,698,,,Imported,M,62,,,
 69,3/31/2020,699,,,Imported,M,11,,,
 69,3/31/2020,700,,,Imported,M,21,,,
@@ -705,47 +705,47 @@
 69,3/31/2020,704,,Red MR群組,Local case,F,32,,,
 69,3/31/2020,705,,Red MR群組,Close contact of local case,F,35,,,
 69,3/31/2020,706,,,Imported,F,17,,,
-69,3/31/2020,707,,酒吧群組,Close contact of local case,F,44,,,
-69,3/31/2020,708,,,Imported,F,47,,,
+69,3/31/2020,707,,酒吧群組,Close contact of local case,F,44,4/22/2020,91,Discharged
+69,3/31/2020,708,,,Imported,F,47,4/22/2020,91,Discharged
 69,3/31/2020,709,347,,Close contact of local case,M,56,,,
 69,3/31/2020,710,711,,Imported,F,86,,,
-69,3/31/2020,711,710,,Imported,M,84,,,
+69,3/31/2020,711,710,,Imported,M,84,4/21/2020,90,Discharged
 69,3/31/2020,712,,,Imported,F,19,,,
 69,3/31/2020,713,533/677,,Close contact of local case,M,62,,,
 69,3/31/2020,714,,,Imported,M,21,4/16/2020,85,Discharged
 69,3/31/2020,715,,,Imported,M,58,,,
 70,4/1/2020,716,,,Imported,F,24,4/9/2020,78,Discharged
 70,4/1/2020,717,,,Local case,M,29,4/15/2020,84,Discharged
-70,4/1/2020,718,,,Local case,M,26,,,
+70,4/1/2020,718,,,Local case,M,26,4/22/2020,91,Discharged
 70,4/1/2020,719,,,Local case,M,39,4/9/2020,78,Discharged
 70,4/1/2020,720,,,Possibly local,F,61,4/14/2020,83,Discharged
-70,4/1/2020,721,,,Imported,F,36,,,
+70,4/1/2020,721,,,Imported,F,36,4/22/2020,91,Discharged
 70,4/1/2020,722,,,Imported,F,16,4/9/2020,78,Discharged
 70,4/1/2020,723,,,Imported,M,15,,,
-70,4/1/2020,724,,,Imported,M,60,,,
+70,4/1/2020,724,,,Imported,M,60,4/24/2020,93,Discharged
 70,4/1/2020,725,724,,Imported,F,58,,,
 70,4/1/2020,726,,,Imported,F,16,4/13/2020,82,Discharged
 70,4/1/2020,727,,,Imported,M,49,,,
-70,4/1/2020,728,,,Imported,F,21,,,
-70,4/1/2020,729,,,Imported,M,53,,,
+70,4/1/2020,728,,,Imported,F,21,4/22/2020,91,Discharged
+70,4/1/2020,729,,,Imported,M,53,4/24/2020,93,Discharged
 70,4/1/2020,730,,,Imported,M,15,4/12/2020,81,Discharged
 70,4/1/2020,731,,,Imported,F,21,4/4/2020,73,Discharged
 70,4/1/2020,732,,,Imported,F,59,4/15/2020,84,Discharged
-70,4/1/2020,733,,,Imported,M,17,,,
+70,4/1/2020,733,,,Imported,M,17,4/22/2020,91,Discharged
 70,4/1/2020,734,,,Imported,M,37,,,
 70,4/1/2020,735,,,Imported,F,53,4/14/2020,83,Discharged
 70,4/1/2020,736,,,Imported,F,22,4/8/2020,77,Discharged
-70,4/1/2020,737,417,,Imported,M,25,,,
+70,4/1/2020,737,417,,Imported,M,25,4/23/2020,92,Discharged
 70,4/1/2020,738,484,,Close contact of local case,F,32,4/16/2020,85,Discharged
 70,4/1/2020,739,,,Possibly local,M,38,4/12/2020,81,Discharged
 70,4/1/2020,740,,,Imported,M,65,4/8/2020,77,Discharged
 70,4/1/2020,741,,,Imported,M,25,,,
 70,4/1/2020,742,467/612/613/622/742,,Close contact of imported case,F,25,,,
 70,4/1/2020,743,,,Local case,F,35,4/16/2020,85,Discharged
-70,4/1/2020,744,,,Possibly local,F,57,,,
+70,4/1/2020,744,,,Possibly local,F,57,4/22/2020,91,Discharged
 70,4/1/2020,745,,,Imported,F,15,4/13/2020,82,Discharged
-70,4/1/2020,746,,酒吧群組,Close contact of local case,M,58,,,
-70,4/1/2020,747,623,,Close contact of possibly local,M,43,,,
+70,4/1/2020,746,,酒吧群組,Close contact of local case,M,58,4/23/2020,92,Discharged
+70,4/1/2020,747,623,,Close contact of possibly local,M,43,4/22/2020,91,Discharged
 70,4/1/2020,748,686,,Close contact of possibly local,M,25,4/9/2020,78,Discharged
 70,4/1/2020,749,,,Imported,F,38,4/12/2020,81,Discharged
 70,4/1/2020,750,534,,Imported,M,24,4/8/2020,77,Discharged
@@ -756,31 +756,31 @@
 70,4/1/2020,755,,酒吧群組,Close contact of local case,F,34,4/9/2020,78,Discharged
 70,4/1/2020,756,504,,Close contact of local case,F,33,,,
 70,4/1/2020,757,462,,Close contact of local case,M,0.11,,,
-70,4/1/2020,758,,Red MR群組,Close contact of local case,M,33,,,
-70,4/1/2020,759,,Red MR群組,Close contact of local case,M,33,,,
-70,4/1/2020,760,525,,Close contact of local case,M,61,,,
+70,4/1/2020,758,,Red MR群組,Close contact of local case,M,33,4/24/2020,93,Discharged
+70,4/1/2020,759,,Red MR群組,Close contact of local case,M,33,4/24/2020,93,Discharged
+70,4/1/2020,760,525,,Close contact of local case,M,61,4/24/2020,93,Discharged
 70,4/1/2020,761,,,Possibly local,F,40,4/16/2020,85,Discharged
-70,4/1/2020,762,,,Imported,F,20,,,
-70,4/1/2020,763,,,Imported,M,21,,,
-70,4/1/2020,764,,,Imported,M,48,,,
+70,4/1/2020,762,,,Imported,F,20,4/21/2020,90,Discharged
+70,4/1/2020,763,,,Imported,M,21,4/20/2020,89,Discharged
+70,4/1/2020,764,,,Imported,M,48,4/22/2020,91,Discharged
 70,4/1/2020,765,,,Imported,M,18,4/16/2020,85,Discharged
 70,4/1/2020,766,,,Imported,M,22,4/7/2020,76,Discharged
-71,4/2/2020,767,,,Possibly local,F,64,,,
+71,4/2/2020,767,,,Possibly local,F,64,4/22/2020,91,Discharged
 71,4/2/2020,768,,,Imported,M,34,4/15/2020,84,Discharged
 71,4/2/2020,769,,,Local case,M,39,,,
 71,4/2/2020,770,,,Imported,F,38,4/17/2020,86,Discharged
 71,4/2/2020,771,,,Imported,F,61,4/13/2020,82,Discharged
 71,4/2/2020,772,,,Imported,M,14,,,
 71,4/2/2020,773,363,,Close contact of possibly local,F,50,4/13/2020,82,Discharged
-71,4/2/2020,774,,,Imported,M,54,,,
+71,4/2/2020,774,,,Imported,M,54,4/22/2020,91,Discharged
 71,4/2/2020,775,,,Possibly local,F,30,,,
 71,4/2/2020,776,,,Imported,M,18,,,
 71,4/2/2020,777,,,Imported,F,36,4/15/2020,84,Discharged
 71,4/2/2020,778,,,Imported,M,52,4/12/2020,81,Discharged
 71,4/2/2020,779,,,Imported,M,21,4/5/2020,74,Discharged
-71,4/2/2020,780,,,Imported,F,27,,,
+71,4/2/2020,780,,,Imported,F,27,4/22/2020,91,Discharged
 71,4/2/2020,781,,,Imported,F,71,,,
-71,4/2/2020,782,,,Imported,M,19,,,
+71,4/2/2020,782,,,Imported,M,19,4/22/2020,91,Discharged
 71,4/2/2020,783,695,,Imported,M,17,,,
 71,4/2/2020,784,,,Imported,F,22,4/17/2020,86,Discharged
 71,4/2/2020,785,,,Imported,F,18,,,
@@ -791,18 +791,18 @@
 71,4/2/2020,790,426/449,,Imported,M,19,4/14/2020,83,Discharged
 71,4/2/2020,791,,,Imported,M,20,4/12/2020,81,Discharged
 71,4/2/2020,792,679,,Imported,M,23,,,
-71,4/2/2020,793,406,,Close contact of possibly local,F,49,,,
+71,4/2/2020,793,406,,Close contact of possibly local,F,49,4/20/2020,89,Discharged
 71,4/2/2020,794,599,,Imported,M,2,,,
 71,4/2/2020,795,,,Imported,F,56,4/16/2020,85,Discharged
 71,4/2/2020,796,756,,Close contact of local case,F,37,,,
 71,4/2/2020,797,,,Local case,F,33,,,
-71,4/2/2020,798,714,,Imported,M,55,,,
+71,4/2/2020,798,714,,Imported,M,55,4/24/2020,93,Discharged
 71,4/2/2020,799,,,Imported,M,18,4/8/2020,77,Discharged
 71,4/2/2020,800,,,Imported,F,19,4/15/2020,84,Discharged
 71,4/2/2020,801,719,,Close contact of local case,M,54,,,
-71,4/2/2020,802,312,,Close contact of local case,M,60,,,
-71,4/2/2020,803,803/847,,Imported,M,22,,,
-72,4/3/2020,804,,,Imported,M,52,,,
+71,4/2/2020,802,312,,Close contact of local case,M,60,4/22/2020,91,Discharged
+71,4/2/2020,803,803/847,,Imported,M,22,4/22/2020,91,Discharged
+72,4/3/2020,804,,,Imported,M,52,4/22/2020,91,Discharged
 72,4/3/2020,805,,,Possibly local,F,41,4/16/2020,85,Discharged
 72,4/3/2020,806,,,Local case,M,27,4/5/2020,74,Discharged
 72,4/3/2020,807,266/319/342,,Close contact of local case,M,27,,,
@@ -814,9 +814,9 @@
 72,4/3/2020,813,,,Imported,M,38,,,
 72,4/3/2020,814,,,Imported,F,33,4/13/2020,82,Discharged
 72,4/3/2020,815,,,Imported,M,25,4/15/2020,84,Discharged
-72,4/3/2020,816,,,Imported,M,16,,,
+72,4/3/2020,816,,,Imported,M,16,4/22/2020,91,Discharged
 72,4/3/2020,817,,,Imported,M,20,,,
-72,4/3/2020,818,,,Imported,F,52,,,
+72,4/3/2020,818,,,Imported,F,52,4/22/2020,91,Discharged
 72,4/3/2020,819,,,Imported,F,23,4/9/2020,78,Discharged
 72,4/3/2020,820,,,Imported,F,20,4/16/2020,85,Discharged
 72,4/3/2020,821,,,Imported,F,20,,,
@@ -825,12 +825,12 @@
 72,4/3/2020,824,,,Imported,F,16,4/13/2020,82,Discharged
 72,4/3/2020,825,,,Imported,F,20,,,
 72,4/3/2020,826,,,Imported,M,19,,,
-72,4/3/2020,827,,,Imported,F,52,,,
+72,4/3/2020,827,,,Imported,F,52,4/22/2020,91,Discharged
 72,4/3/2020,828,,,Imported,M,19,,,
 72,4/3/2020,829,,,Imported,M,20,,,
-72,4/3/2020,830,,酒吧群組,Possibly local,M,59,,,
+72,4/3/2020,830,,酒吧群組,Possibly local,M,59,4/23/2020,92,Discharged
 72,4/3/2020,831,,,Imported,M,21,,,
-72,4/3/2020,832,,,Imported,F,18,,,
+72,4/3/2020,832,,,Imported,F,18,4/22/2020,91,Discharged
 72,4/3/2020,833,,,Local case,M,48,,,
 72,4/3/2020,834,,,Imported,F,60,4/15/2020,84,Discharged
 72,4/3/2020,835,,,Local case,F,48,,,
@@ -840,27 +840,27 @@
 72,4/3/2020,839,669,,Imported,F,35,,,
 72,4/3/2020,840,,,Local case,M,47,,,
 72,4/3/2020,841,,,Imported,M,55,,,
-72,4/3/2020,842,567,,Close contact of local case,M,20,,,
+72,4/3/2020,842,567,,Close contact of local case,M,20,4/20/2020,89,Discharged
 72,4/3/2020,843,,,Imported,F,19,,,
 72,4/3/2020,844,,酒吧群組,Close contact of local case,F,59,4/15/2020,84,Discharged
 72,4/3/2020,845,,,Imported,F,47,4/15/2020,84,Discharged
 72,4/3/2020,846,,酒吧群組,Close contact of local case,M,51,,,
 73,4/4/2020,847,,,Imported,M,20,4/16/2020,85,Discharged
 73,4/4/2020,848,,,Close contact of possibly local,F,25,4/17/2020,86,Discharged
-73,4/4/2020,849,,,Close contact of local case,F,44,,,
-73,4/4/2020,850,,,Imported,F,21,,,
+73,4/4/2020,849,,,Close contact of local case,F,44,4/22/2020,91,Discharged
+73,4/4/2020,850,,,Imported,F,21,4/22/2020,91,Discharged
 73,4/4/2020,851,,,Imported,F,21,4/16/2020,85,Discharged
 73,4/4/2020,852,,,Imported,F,18,4/17/2020,86,Discharged
 73,4/4/2020,853,,,Imported,M,23,4/7/2020,76,Discharged
 73,4/4/2020,854,663,警員,Local case,M,46,,,
-73,4/4/2020,855,428,,Close contact of local case,F,36,,,
+73,4/4/2020,855,428,,Close contact of local case,F,36,4/22/2020,91,Discharged
 73,4/4/2020,856,,,Close contact of possibly local,M,93,,,
 73,4/4/2020,857,,,Local case,M,71,,,
 73,4/4/2020,858,858/859/860,,Imported,M,38,4/14/2020,83,Discharged
 73,4/4/2020,859,858/859/860,,Imported,F,38,4/14/2020,83,Discharged
 73,4/4/2020,860,858/859/860,,Imported,M,6,4/14/2020,83,Discharged
 73,4/4/2020,861,,,Imported,M,18,,,
-73,4/4/2020,862,,,Imported,M,23,,,
+73,4/4/2020,862,,,Imported,M,23,4/22/2020,91,Discharged
 73,4/4/2020,863,,酒吧群組,Close contact of local case,F,24,4/16/2020,85,Discharged
 74,4/5/2020,864,,酒吧群組,Close contact of local case,M,40,4/16/2020,85,Discharged
 74,4/5/2020,865,,,Imported,M,18,4/9/2020,78,Discharged
@@ -870,84 +870,84 @@
 74,4/5/2020,869,,,Imported,F,18,4/8/2020,77,Discharged
 74,4/5/2020,870,,,Imported,F,60,4/17/2020,86,Discharged
 74,4/5/2020,871,,,Imported,F,19,,,
-74,4/5/2020,872,836,,Imported,M,33,,,
-74,4/5/2020,873,,,Imported,M,48,,,
+74,4/5/2020,872,836,,Imported,M,33,4/20/2020,89,Discharged
+74,4/5/2020,873,,,Imported,M,48,4/24/2020,93,Discharged
 74,4/5/2020,874,852,,Imported,M,20,4/17/2020,86,Discharged
 74,4/5/2020,875,,,Imported,M,19,4/12/2020,81,Discharged
-74,4/5/2020,876,,,Imported,F,20,,,
+74,4/5/2020,876,,,Imported,F,20,4/22/2020,91,Discharged
 74,4/5/2020,877,360,酒吧群組,Close contact of local case,M,39,,,
 74,4/5/2020,878,,,Imported,M,64,,,
 74,4/5/2020,879,698,,Imported,F,60,,,
-74,4/5/2020,880,652/659/701,,Imported,M,21,,,
+74,4/5/2020,880,652/659/701,,Imported,M,21,4/22/2020,91,Discharged
 74,4/5/2020,881,247,,Imported,M,35,4/14/2020,83,Discharged
 74,4/5/2020,882,,,Imported,F,22,4/9/2020,78,Discharged
 74,4/5/2020,883,,,Imported,M,49,4/16/2020,85,Discharged
-74,4/5/2020,884,635,,Close contact of local case,M,23,,,
+74,4/5/2020,884,635,,Close contact of local case,M,23,4/23/2020,92,Discharged
 74,4/5/2020,885,,,Imported,M,20,4/14/2020,83,Discharged
 74,4/5/2020,886,,,Imported,F,46,4/17/2020,86,Discharged
 74,4/5/2020,887,,,Imported,M,62,,,
 74,4/5/2020,888,,,Imported,M,20,,,
-74,4/5/2020,889,,,Imported,M,19,,,
+74,4/5/2020,889,,,Imported,M,19,4/22/2020,91,Discharged
 74,4/5/2020,890,,,Imported,F,16,4/9/2020,78,Discharged
 74,4/5/2020,891,757,,Close contact of local case,F,35,,,
-75,4/6/2020,892,,,Imported,M,56,,,
+75,4/6/2020,892,,,Imported,M,56,4/22/2020,91,Discharged
 75,4/6/2020,893,,,Imported,M,20,,,
-75,4/6/2020,894,,,Imported,M,16,,,
-75,4/6/2020,895,,,Imported,M,48,,,
-75,4/6/2020,896,,,Imported,F,61,,,
-75,4/6/2020,897,,,Imported,M,39,,,
-75,4/6/2020,898,,,Imported,M,18,,,
+75,4/6/2020,894,,,Imported,M,16,4/22/2020,91,Discharged
+75,4/6/2020,895,,,Imported,M,48,4/22/2020,91,Discharged
+75,4/6/2020,896,,,Imported,F,61,4/21/2020,90,Discharged
+75,4/6/2020,897,,,Imported,M,39,4/24/2020,93,Discharged
+75,4/6/2020,898,,,Imported,M,18,4/23/2020,92,Discharged
 75,4/6/2020,899,,,Imported,F,28,4/17/2020,86,Discharged
 75,4/6/2020,900,,,Imported,F,40,,,
 75,4/6/2020,901,,,Imported,F,21,4/9/2020,78,Discharged
 75,4/6/2020,902,,,Imported,M,61,,,
 75,4/6/2020,903,835,馬莎卡拉OK群組,Local case,M,48,,,
 75,4/6/2020,904,,酒吧群組,Close contact of local case,M,44,,,
-75,4/6/2020,905,411,,Close contact of local case,F,35,,,
+75,4/6/2020,905,411,,Close contact of local case,F,35,4/20/2020,89,Discharged
 75,4/6/2020,906,,酒吧群組,Close contact of local case,M,56,,,
 75,4/6/2020,907,,秘魯旅行團群組,Imported,F,54,4/17/2020,86,Discharged
 75,4/6/2020,908,,秘魯旅行團群組,Imported,M,64,,,
-75,4/6/2020,909,,秘魯旅行團群組,Imported,M,60,,,
+75,4/6/2020,909,,秘魯旅行團群組,Imported,M,60,4/22/2020,91,Discharged
 75,4/6/2020,910,911,,Imported,F,29,4/16/2020,85,Discharged
 75,4/6/2020,911,910,,Imported,M,29,4/16/2020,85,Discharged
-75,4/6/2020,912,447,,Close contact of local case,M,3,,,
-75,4/6/2020,913,447,,Close contact of local case,M,8,,,
+75,4/6/2020,912,447,,Close contact of local case,M,3,4/22/2020,91,Discharged
+75,4/6/2020,913,447,,Close contact of local case,M,8,4/21/2020,90,Discharged
 75,4/6/2020,914,,,Imported,F,60,,,
 75,4/6/2020,915,,,Imported,F,48,,,
-76,4/7/2020,916,,,Imported,M,22,,,
+76,4/7/2020,916,,,Imported,M,22,4/21/2020,90,Discharged
 76,4/7/2020,917,,,Imported,F,21,,,
 76,4/7/2020,918,,,Imported,M,53,,,
 76,4/7/2020,919,,,Imported,M,40,4/12/2020,81,Discharged
-76,4/7/2020,920,,,Imported,M,22,,,
+76,4/7/2020,920,,,Imported,M,22,4/22/2020,91,Discharged
 76,4/7/2020,921,,,Imported,F,40,4/14/2020,83,Discharged
-76,4/7/2020,922,917,,Imported,M,20,,,
+76,4/7/2020,922,917,,Imported,M,20,4/20/2020,89,Discharged
 76,4/7/2020,923,,馬莎卡拉OK群組,Close contact of local case,F,31,,,
 76,4/7/2020,924,759,,Close contact of local case,F,54,,,
 76,4/7/2020,925,,馬莎卡拉OK群組,Close contact of local case,F,19,,,
 76,4/7/2020,926,864,,Close contact of local case,F,40,,,
 76,4/7/2020,927,,,Imported,M,19,,,
 76,4/7/2020,928,526,,Close contact of local case,M,55,,,
-76,4/7/2020,929,477/525,,Close contact of local case,M,21,,,
+76,4/7/2020,929,477/525,,Close contact of local case,M,21,4/23/2020,92,Discharged
 76,4/7/2020,930,453,,Close contact of local case,M,16,,,
 76,4/7/2020,931,461,,Imported,F,59,4/16/2020,85,Discharged
 76,4/7/2020,932,,馬莎卡拉OK群組,Close contact of local case,M,24,,,
 76,4/7/2020,933,,,Local case,F,39,4/17/2020,86,Discharged
 76,4/7/2020,934,,,Imported,F,29,,,
-76,4/7/2020,935,,,Imported,M,61,,,
-76,4/7/2020,936,,,Imported,M,35,,,
+76,4/7/2020,935,,,Imported,M,61,4/24/2020,93,Discharged
+76,4/7/2020,936,,,Imported,M,35,4/20/2020,89,Discharged
 77,4/8/2020,937,,,Imported,F,27,,,
 77,4/8/2020,938,,,Imported,F,70,,,
-77,4/8/2020,939,,,Imported,F,26,,,
-77,4/8/2020,940,,,Imported,M,5,,,
-77,4/8/2020,941,,,Close contact of local case,M,57,4/9/2020,78,
+77,4/8/2020,939,,,Imported,F,26,4/20/2020,89,Discharged
+77,4/8/2020,940,,,Imported,M,5,4/22/2020,91,Discharged
+77,4/8/2020,941,,,Close contact of local case,M,57,4/9/2020,78,Discharged
 77,4/8/2020,942,,,Imported,F,71,,,
-77,4/8/2020,943,833,,Close contact of local case,F,31,,,
-77,4/8/2020,944,,馬莎卡拉OK群組,Close contact of local case,M,37,,,
+77,4/8/2020,943,833,,Close contact of local case,F,31,4/24/2020,93,Discharged
+77,4/8/2020,944,,馬莎卡拉OK群組,Close contact of local case,M,37,4/24/2020,93,Discharged
 77,4/8/2020,945,,,Local case,F,57,,,
-77,4/8/2020,946,,,Possibly local,M,35,,,
-77,4/8/2020,947,,,Imported,F,20,,,
+77,4/8/2020,946,,,Possibly local,M,35,4/21/2020,90,Discharged
+77,4/8/2020,947,,,Imported,F,20,4/22/2020,91,Discharged
 77,4/8/2020,948,,,Imported,M,62,4/17/2020,86,Discharged
-77,4/8/2020,949,,,Imported,F,37,,,
+77,4/8/2020,949,,,Imported,F,37,4/22/2020,91,Discharged
 77,4/8/2020,950,641,,Imported,M,68,,,
 77,4/8/2020,951,499,,Close contact of local case,F,47,,,
 77,4/8/2020,952,,,Imported,F,22,4/16/2020,85,Discharged
@@ -959,18 +959,18 @@
 77,4/8/2020,958,932,,Close contact of local case,M,57,,,
 77,4/8/2020,959,,,Imported,F,20,,,
 77,4/8/2020,960,801,,Close contact of local case,M,25,,,
-77,4/8/2020,961,,,Local case,F,31,,,
+77,4/8/2020,961,,,Local case,F,31,4/22/2020,91,Discharged
 78,4/9/2020,962,,,Imported,M,63,,,
 78,4/9/2020,963,,,Imported,F,31,4/13/2020,82,Discharged
-78,4/9/2020,964,,,Imported,F,65,,,
-78,4/9/2020,965,,,Imported,F,66,,,
+78,4/9/2020,964,,,Imported,F,65,4/21/2020,90,Discharged
+78,4/9/2020,965,,,Imported,F,66,4/20/2020,89,Discharged
 78,4/9/2020,966,921,,Imported,F,35,4/13/2020,82,Discharged
-78,4/9/2020,967,,,Imported,M,21,,,
+78,4/9/2020,967,,,Imported,M,21,4/22/2020,91,Discharged
 78,4/9/2020,968,,,Local case,M,43,4/14/2020,83,Discharged
 78,4/9/2020,969,,,Imported,M,22,4/15/2020,84,Discharged
 78,4/9/2020,970,,,Imported,F,26,,,
 78,4/9/2020,971,,,Imported,M,55,4/16/2020,85,Discharged
-78,4/9/2020,972,,,Imported,M,39,,,
+78,4/9/2020,972,,,Imported,M,39,4/21/2020,90,Discharged
 78,4/9/2020,973,,酒吧群組,Close contact of local case,M,38,,,
 78,4/9/2020,974,757,,Close contact of local case,M,37,,,
 79,4/10/2020,975,,,Local case,F,24,4/15/2020,84,Discharged
@@ -978,31 +978,31 @@
 79,4/10/2020,977,,,Possibly local,M,32,,,
 79,4/10/2020,978,,,Possibly local,M,51,4/14/2020,83,Discharged
 79,4/10/2020,979,,,Imported,M,19,4/15/2020,84,Discharged
-79,4/10/2020,980,,,Imported,M,20,,,
+79,4/10/2020,980,,,Imported,M,20,4/22/2020,91,Discharged
 79,4/10/2020,981,,,Imported,F,38,,,
 79,4/10/2020,982,,,Imported,M,22,4/16/2020,85,Discharged
 79,4/10/2020,983,,,Imported,M,41,,,
 79,4/10/2020,984,,,Imported,M,50,,,
 79,4/10/2020,985,,,Imported,M,22,,,
-79,4/10/2020,986,,,Imported,F,17,,,
+79,4/10/2020,986,,,Imported,F,17,4/24/2020,93,Discharged
 79,4/10/2020,987,,,Imported,M,20,4/14/2020,83,Discharged
 79,4/10/2020,988,,,Imported,F,75,,,
 79,4/10/2020,989,,,Imported,F,25,4/16/2020,85,Discharged
 79,4/10/2020,990,,,Imported,F,19,,,
-80,4/11/2020,991,629,,Imported,F,45,,,
+80,4/11/2020,991,629,,Imported,F,45,4/22/2020,91,Discharged
 80,4/11/2020,992,777,,Imported,M,38,,,
 80,4/11/2020,993,,,Imported,F,32,,,
 80,4/11/2020,994,,,Imported,F,38,,,
 80,4/11/2020,995,,,Imported,M,19,,,
 80,4/11/2020,996,,,Imported,M,27,,,
-80,4/11/2020,997,843,,Imported,F,24,,,
+80,4/11/2020,997,843,,Imported,F,24,4/22/2020,91,Discharged
 80,4/11/2020,998,976,,Close contact of local case,F,29,,,
 80,4/11/2020,999,,,Imported,F,29,,,
-80,4/11/2020,1000,,,Imported,M,37,,,
-80,4/11/2020,1001,,,Imported,M,59,,,
+80,4/11/2020,1000,,,Imported,M,37,4/22/2020,91,Discharged
+80,4/11/2020,1001,,,Imported,M,59,4/20/2020,89,Discharged
 81,4/12/2020,1002,,,Imported,M,56,,,
-81,4/12/2020,1003,902,,Close contact of imported case,F,63,,,
-81,4/12/2020,1004,,,Imported,M,20,,,
+81,4/12/2020,1003,902,,Close contact of imported case,F,63,4/22/2020,91,Discharged
+81,4/12/2020,1004,,,Imported,M,20,4/22/2020,91,Discharged
 81,4/12/2020,1005,956,,Imported,F,21,,,
 82,4/13/2020,1006,,,Imported,F,72,,,
 82,4/13/2020,1007,988,,Imported,M,79,,,
@@ -1012,14 +1012,26 @@
 83,4/14/2020,1011,,,Imported,M,53,,,
 83,4/14/2020,1012,,,Imported,M,16,,,
 83,4/14/2020,1013,,,Possibly local,M,22,,,
-84,4/15/2020,1014,,,Imported,M,22,,,
+84,4/15/2020,1014,,,Imported,M,22,4/22/2020,91,Discharged
 84,4/15/2020,1015,,,Imported,F,60,,,
-84,4/15/2020,1016,,,Imported,M,42,,,
-84,4/15/2020,1017,,,Imported,M,36,,,
-85,4/16/2020,1018,,,Imported,F,19,,,
+84,4/15/2020,1016,,,Imported,M,42,4/22/2020,91,Discharged
+84,4/15/2020,1017,,,Imported,M,36,4/20/2020,89,Discharged
+85,4/16/2020,1018,,,Imported,F,19,4/22/2020,91,Discharged
 86,4/17/2020,1019,,,Imported,F,13,,,
-86,4/17/2020,1020,,,Imported,M,21,,,
+86,4/17/2020,1020,,,Imported,M,21,4/24/2020,93,Discharged
 86,4/17/2020,1021,,,Imported,F,55,,,
 86,4/17/2020,1022,,,Possibly local,F,20,,,
 87,4/18/2020,1023,994,,Imported,F,4,,,
 87,4/18/2020,1024,,,Imported,M,29,,,
+88,4/19/2020,1025,,,Imported,M,35,,,
+88,4/19/2020,1026,,,Local case,F,47,,,
+90,4/21/2020,1027,,,Imported,F,38,,,
+90,4/21/2020,1028,,,Imported,M,39,,,
+90,4/21/2020,1029,,,Imported,F,13,,,
+90,4/21/2020,1030,,,Imported,M,25,4/24/2020,93,
+91,4/22/2020,1031,,,Imported,M,68,,,
+91,4/22/2020,1032,,,Imported,F,52,,,
+91,4/22/2020,1033,,,Imported,F,26,,,
+91,4/22/2020,1034,,,Imported,M,2,,,
+92,4/23/2020,1035,,,Imported,M,27,,,
+92,4/23/2020,1036,,,Imported,M,58,,,

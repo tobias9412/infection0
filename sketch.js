@@ -24,6 +24,8 @@ let strConfirmed  = 0;
 let strDischarged = 0;
 let strDeceased   = 0;
 
+let hover=0;
+
 function preload() {
   table = loadTable('https://raw.githubusercontent.com/tobias9412/infection0/master/data.csv',  'csv', 'header');
 }
@@ -78,17 +80,14 @@ function setup() {
   n[r] = new Node(id[r], journal[r], connected[r], category[r], classification[r], endJournal[r], endStatus[r], windowWidth / 2 - mindist/2 + random(mindist), windowHeight / 2 - mindist/2 + random(mindist));
       console.log(n[r].id, n[r].journal, n[r].connected, n[r].category, n[r].classification, n[r].endJournal, n[r].endStatus); 
     }
-
-  textStyle(BOLD);
-  textSize(20);
 }
 
 function draw() {
-  background(200);
+  background(250);
   push();
   translate(translatePos);
 
-  fill(210);
+  fill(240);
   ellipse(windowWidth/2, windowHeight/2, 1024, 1024);
 
     //reset intensity
@@ -155,13 +154,13 @@ function draw() {
     for (let r = 0; r < rowCount; r++) { 
       if (n[r].journal <= display && n[r].endJournal <= display) {
         if(n[r].endStatus == 0) {
-          fill(127+n[r].intensity*30, 149, 0);
+          fill(127+n[r].intensity*50, 180, 0);
           noStroke();
           ellipse(n[r].pos.x, n[r].pos.y, 15+n[r].intensity^2, 15+n[r].intensity^2);
         }
         else if (n[r].endStatus == 1) {
-          stroke(127+n[r].intensity*30, 149, 0);
-          fill(210);
+          stroke(127+n[r].intensity*50, 180, 0);
+          fill(240);
           ellipse(n[r].pos.x, n[r].pos.y, 15+n[r].intensity^2, 15+n[r].intensity^2);
         } 
         else if (n[r].endStatus == 2) {
@@ -190,54 +189,87 @@ function draw() {
 
     // welcomePopUp
     rectMode(CENTER)
-    fill(230);
-    rect(windowWidth/2, windowHeight/2+firstPopUpY, 360, 600, 15);
-    fill(50);
-    textAlign(CENTER, CENTER);
-    text("拖放或滑動以瀏覽畫面\n\n\n圖例\n\n\n\n\n\n\n\n\n關連的個案會以聚集圓點顯示，\n個案傳染影響越大，\n顏色越偏橙色，圓點越大。\n\n\n", windowWidth/2, windowHeight/2+firstPopUpY);
+//  fill(230);
+//  rect(windowWidth/2, windowHeight/2+firstPopUpY, 360, 600, 15);
+    fill(0, 200);
     textAlign(LEFT, CENTER);
-    text("已出院個案\n\n死亡個案\n\n確診或疑似個案\n\n\n", windowWidth/2, windowHeight/2+firstPopUpY);
+    textStyle(BOLD);
+    textSize(24);
+    text("COVID-19 香港傳染情況\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", windowWidth/2-120, windowHeight/2+firstPopUpY);
+    textStyle(BOLD);
+    textSize(18);
+    text("圖例\n\n\n\n\n\n\n\n\n\n\n\n\n\n", windowWidth/2-120, windowHeight/2+firstPopUpY);
+    textStyle(NORMAL);
+    textSize(18);
+    text("     已出院個案\n\n     死亡個案\n\n     確診或疑似個案\n\n\n\n\n\n", windowWidth/2-120, windowHeight/2+firstPopUpY);
+    text("\n\n\n\n\n\n\n關連的個案會以聚集圓點顯示，\n個案傳染影響越大，\n顏色越偏橙色，圓點越大。\n\n拖放或滑動以瀏覽畫面。\n", windowWidth/2-120, windowHeight/2+firstPopUpY);
+    textStyle(NORMAL);
+    textSize(15);
+    text("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n資料來源 :\n衞生署衞生防護中心及Now新聞", windowWidth/2-120, windowHeight/2+firstPopUpY);
+
+
+
     fill(0, 0);
     stroke(150);
-    ellipse(windowWidth*0.45, windowHeight/2-90+firstPopUpY, 15, 15);
+    ellipse(windowWidth/2-110, windowHeight/2-115+firstPopUpY, 15, 15);
     fill(0);
     noStroke();
-    ellipse(windowWidth*0.45, windowHeight/2-40+firstPopUpY, 15, 15);
+    ellipse(windowWidth/2-110, windowHeight/2-70+firstPopUpY, 15, 15);
     fill(150);
     noStroke();
-    ellipse(windowWidth*0.45, windowHeight/2+10+firstPopUpY, 15, 15);
+    ellipse(windowWidth/2-110, windowHeight/2-25+firstPopUpY, 15, 15);
 
-    fill(100);
+    stroke(0, 20)
+    fill (0, hover);
     rect(windowWidth/2, windowHeight/2+240+firstPopUpY, 300, 60, 10);
-    fill(230);
+    fill (0, 200);
     textAlign(CENTER, CENTER);
-    text("繼續", windowWidth/2, windowHeight/2+240+firstPopUpY);
+    textStyle(NORMAL);
+    textSize(18);
+    text("開始", windowWidth/2, windowHeight/2+240+firstPopUpY);
+    noStroke();
+
+    if (mouseX > windowWidth/2-150 && mouseX < windowWidth/2+150 &&
+        mouseY > windowHeight/2+210 && mouseY < windowHeight/2+270)
+      if (hover < 20) hover += 4;
+
   }
 
   else {
     firstPopUpY = lerp(firstPopUpY, windowHeight/2+300, 0.3);
   
+
+  textStyle(NORMAL);
+  textSize(18);
+  textLeading(25);
+
   if (mobile) { 
     rectMode(CORNER);
-    fill (130);
+    fill (0, 10+hover);
     rect(10, windowHeight-55, windowWidth-20, 50, 10);
-    fill(230);
+    fill (0, 200);
     textAlign(CENTER, CENTER);
     text("下一日", windowWidth/2, windowHeight-30);
   }
   else {
     rectMode(CORNER);
-    fill (130);
+    fill (0, 10+hover);
     rect(300, windowHeight-statusBarHeight+20, windowWidth-320, statusBarHeight-30, 10);
-    fill(230);
+    fill (0, 200);
     textAlign(CENTER, CENTER);
     text("下一日", 300+(windowWidth-320)/2, windowHeight-45);
   }
 
+  if ((mobile && mouseY > windowHeight-60) || 
+      (!mobile && mouseY > windowHeight-statusBarHeight && mouseX > 300))
+    if (hover < 20) hover += 4;
+
     //info display
-    fill(50);
+    fill (0, 200);
     noStroke();
-    textSize(20);
+    textAlign(RIGHT, TOP);
+    text("資料更新：2020年4月25日", windowWidth-5, 5);
+
     textAlign(LEFT, TOP);
     if (display < 10)
       text("截至2020年1月" + (display+22) + "日" , 10, windowHeight-statusBarHeight+10);
@@ -252,6 +284,9 @@ function draw() {
     text("已出院個案：　　 " + strDischarged + "宗\n死亡個案：　　　 " + strDeceased + "宗\n確診或疑似個案： " + strConfirmed　+ "宗", 10, windowHeight-statusBarHeight+35);
   }
   console.log(frameRate());
+
+  if (hover > 0)
+    hover -= 2;
 }
 
 let deltaX, deltaY;
@@ -274,13 +309,16 @@ function touchEnded() {
   if (display == 0) {
     if (mouseX > windowWidth/2-150 && mouseX < windowWidth/2+150 &&
         mouseY > windowHeight/2+210 && mouseY < windowHeight/2+270)
-      display = 1;
-          strConfirmed = 2;
+        display = 1;
+        strConfirmed = 2;
+        hover = 0;
 
   } else {
     if ((mobile && mouseY > windowHeight-60) || 
         (!mobile && mouseY > windowHeight-statusBarHeight && mouseX > 300)){
-      
+
+        hover = 25;
+
         strDischarged = 0;
         strDeceased = 0;
 
